@@ -10,5 +10,4 @@ public class QuartzSchedulersSpringBootApplication {
 		SpringApplication.run(QuartzSchedulersSpringBootApplication.class, args);
 		System.out.println("\n***********************\n");
 	}
-
 }

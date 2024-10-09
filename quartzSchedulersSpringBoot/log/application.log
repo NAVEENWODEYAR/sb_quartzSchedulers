@@ -1,0 +1,27 @@
+2024-10-09 19:13:54.780 ERROR o.s.b.d.LoggingFailureAnalysisReporter - 
+
+***************************
+APPLICATION FAILED TO START
+***************************
+
+Description:
+
+Failed to bind properties under 'logging.level.com.gowri.quartz' to org.springframework.boot.logging.LogLevel:
+
+    Property: logging.level.com.gowri.quartz
+    Value: "DEBUG  # Adjust according to your package structure"
+    Origin: class path resource [application-DEV.properties] - 23:32
+    Reason: failed to convert java.lang.String to org.springframework.boot.logging.LogLevel (caused by java.lang.IllegalArgumentException: No enum constant org.springframework.boot.logging.LogLevel.DEBUG  # Adjust according to your package structure)
+
+Action:
+
+Update your application's configuration. The following values are valid:
+
+    DEBUG
+    ERROR
+    FATAL
+    INFO
+    OFF
+    TRACE
+    WARN
+

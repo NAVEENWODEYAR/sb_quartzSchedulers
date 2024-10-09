@@ -1,12 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
 	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd">
 	<modelVersion>4.0.0</modelVersion>
 	<parent>
 		<groupId>org.springframework.boot</groupId>
 		<artifactId>spring-boot-starter-parent</artifactId>
 		<version>3.3.4</version>
-		<relativePath/> 
+		<relativePath />
 		<!-- lookup parent from repository -->
 	</parent>
 	<groupId>com.gowri.quartz</groupId>
@@ -14,18 +15,27 @@
 	<version>0.0.1</version>
 	<name>quartzSchedulersSpringBoot</name>
 	<description>Demo project for quartz_schedulers</description>
-	<url/>
+	<url />
 	<licenses>
-		<license/>
+		<license />
 	</licenses>
 	<developers>
-		<developer/>
+		<developer>
+			<id>naveen.kumar</id>
+			<name>Naveen Kumar K</name>
+			<email>naveenkrishnawodeyar@gmail.com</email>
+			<organization>Bangalore</organization>
+			<roles>
+				<role>Java Developer</role>
+			</roles>
+		</developer>
 	</developers>
 	<scm>
-		<connection/>
-		<developerConnection/>
-		<tag/>
-		<url/>
+		<connection>scm:git:git://github.com/https://github.com/NAVEENWODEYAR/sb_quartzSchedulers.git</connection>
+		<developerConnection>
+			scm:git:ssh://git@github.com:NAVEENWODEYAR/https://github.com/NAVEENWODEYAR/sb_quartzSchedulers.git</developerConnection>
+		<tag>HEAD</tag>
+		<url>https://github.com/NAVEENWODEYAR/https://github.com/NAVEENWODEYAR/sb_quartzSchedulers</url>
 	</scm>
 	<properties>
 		<java.version>17</java.version>
@@ -65,6 +75,11 @@
 			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-starter-test</artifactId>
 			<scope>test</scope>
+		</dependency>
+		<dependency>
+			<groupId>org.springdoc</groupId>
+			<artifactId>springdoc-openapi-starter-webmvc-ui</artifactId>
+			<version>2.3.0</version>
 		</dependency>
 	</dependencies>
 
