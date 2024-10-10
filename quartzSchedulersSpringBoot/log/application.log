@@ -3729,3 +3729,768 @@ Caused by: java.sql.SQLSyntaxErrorException: Table 'quartzdb.qrtz_locks' doesn't
 	at com.zaxxer.hikari.pool.HikariProxyPreparedStatement.executeQuery(HikariProxyPreparedStatement.java)
 	at org.quartz.impl.jdbcjobstore.StdRowLockSemaphore.executeSQL(StdRowLockSemaphore.java:123)
 	... 25 common frames omitted
+2024-10-10 22:12:16.003 INFO  c.g.q.QuartzSchedulersSpringBootApplication - Starting QuartzSchedulersSpringBootApplication using Java 21.0.1 with PID 12452 (N:\Pro\Menses\2024\Oct\schedulers\quartzSchedulersSpringBoot\target\classes started by NaveenWodeyar in N:\Pro\Menses\2024\Oct\schedulers\quartzSchedulersSpringBoot)
+2024-10-10 22:12:16.009 INFO  c.g.q.QuartzSchedulersSpringBootApplication - The following 1 profile is active: "UAT"
+2024-10-10 22:12:16.173 INFO  o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor - Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2024-10-10 22:12:16.173 INFO  o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor - For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2024-10-10 22:12:17.937 INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2024-10-10 22:12:17.965 INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 17 ms. Found 0 JPA repository interfaces.
+2024-10-10 22:12:19.260 INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port 8765 (http)
+2024-10-10 22:12:19.282 INFO  o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8765"]
+2024-10-10 22:12:19.288 INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+2024-10-10 22:12:19.289 INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.30]
+2024-10-10 22:12:19.383 INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2024-10-10 22:12:19.384 INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 3203 ms
+2024-10-10 22:12:19.823 DEBUG o.s.w.f.ServerHttpObservationFilter - Filter 'webMvcObservationFilter' configured for use
+2024-10-10 22:12:19.908 INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2024-10-10 22:12:20.677 INFO  com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@4bc4ea7
+2024-10-10 22:12:20.680 INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+2024-10-10 22:12:21.638 INFO  o.s.o.j.p.SpringPersistenceUnitInfo - No LoadTimeWeaver setup: ignoring JPA class transformer
+2024-10-10 22:12:22.302 INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2024-10-10 22:12:22.434 INFO  org.quartz.impl.StdSchedulerFactory - Using default implementation for ThreadExecutor
+2024-10-10 22:12:22.449 INFO  o.quartz.core.SchedulerSignalerImpl - Initialized Scheduler Signaller of type: class org.quartz.core.SchedulerSignalerImpl
+2024-10-10 22:12:22.450 INFO  org.quartz.core.QuartzScheduler - Quartz Scheduler v.2.3.2 created.
+2024-10-10 22:12:22.454 INFO  o.s.s.quartz.LocalDataSourceJobStore - Using db table-based data access locking (synchronization).
+2024-10-10 22:12:22.458 INFO  o.s.s.quartz.LocalDataSourceJobStore - JobStoreCMT initialized.
+2024-10-10 22:12:22.460 INFO  org.quartz.core.QuartzScheduler - Scheduler meta-data: Quartz Scheduler (v2.3.2) 'quartzScheduler' with instanceId 'NON_CLUSTERED'
+  Scheduler class: 'org.quartz.core.QuartzScheduler' - running locally.
+  NOT STARTED.
+  Currently in standby mode.
+  Number of jobs executed: 0
+  Using thread pool 'org.quartz.simpl.SimpleThreadPool' - with 10 threads.
+  Using job-store 'org.springframework.scheduling.quartz.LocalDataSourceJobStore' - which supports persistence. and is not clustered.
+
+2024-10-10 22:12:22.460 INFO  org.quartz.impl.StdSchedulerFactory - Quartz scheduler 'quartzScheduler' initialized from an externally provided properties instance.
+2024-10-10 22:12:22.460 INFO  org.quartz.impl.StdSchedulerFactory - Quartz scheduler version: 2.3.2
+2024-10-10 22:12:22.460 INFO  org.quartz.core.QuartzScheduler - JobFactory set to: org.springframework.scheduling.quartz.SpringBeanJobFactory@7f31e0d7
+2024-10-10 22:12:22.883 WARN  o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2024-10-10 22:12:23.090 DEBUG o.s.w.s.m.m.a.RequestMappingHandlerMapping - 8 mappings in 'requestMappingHandlerMapping'
+2024-10-10 22:12:23.121 DEBUG o.s.w.s.h.BeanNameUrlHandlerMapping - Detected 1 mappings in 'beanNameHandlerMapping'
+2024-10-10 22:12:23.311 DEBUG o.s.w.s.h.SimpleUrlHandlerMapping - Patterns [/webjars/**, /**, /swagger-ui*/*swagger-initializer.js, /swagger-ui*/**] in 'resourceHandlerMapping'
+2024-10-10 22:12:23.388 DEBUG o.s.w.s.m.m.a.RequestMappingHandlerAdapter - ControllerAdvice beans: 0 @ModelAttribute, 0 @InitBinder, 1 RequestBodyAdvice, 1 ResponseBodyAdvice
+2024-10-10 22:12:23.451 DEBUG o.s.w.s.m.m.a.ExceptionHandlerExceptionResolver - ControllerAdvice beans: 1 @ExceptionHandler, 1 ResponseBodyAdvice
+2024-10-10 22:12:24.344 INFO  o.s.b.d.a.OptionalLiveReloadServer - LiveReload server is running on port 35729
+2024-10-10 22:12:24.359 INFO  o.s.b.a.e.web.EndpointLinksResolver - Exposing 16 endpoints beneath base path '/actuator'
+2024-10-10 22:12:24.469 INFO  o.a.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8765"]
+2024-10-10 22:12:24.497 INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port 8765 (http) with context path '/'
+2024-10-10 22:12:24.499 INFO  o.s.s.quartz.SchedulerFactoryBean - Starting Quartz Scheduler now
+2024-10-10 22:12:26.597 INFO  o.a.coyote.http11.Http11NioProtocol - Stopping ProtocolHandler ["http-nio-8765"]
+2024-10-10 22:12:26.607 WARN  o.s.b.w.s.c.AnnotationConfigServletWebServerApplicationContext - Exception encountered during context initialization - cancelling refresh attempt: org.springframework.context.ApplicationContextException: Failed to start bean 'quartzScheduler'
+2024-10-10 22:12:26.613 INFO  o.s.s.quartz.SchedulerFactoryBean - Shutting down Quartz Scheduler
+2024-10-10 22:12:26.613 INFO  org.quartz.core.QuartzScheduler - Scheduler quartzScheduler_$_NON_CLUSTERED shutting down.
+2024-10-10 22:12:26.613 INFO  org.quartz.core.QuartzScheduler - Scheduler quartzScheduler_$_NON_CLUSTERED paused.
+2024-10-10 22:12:26.613 INFO  org.quartz.core.QuartzScheduler - Scheduler quartzScheduler_$_NON_CLUSTERED shutdown complete.
+2024-10-10 22:12:26.614 INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
+2024-10-10 22:12:26.618 INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
+2024-10-10 22:12:26.629 INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
+2024-10-10 22:12:26.652 INFO  o.s.b.a.l.ConditionEvaluationReportLogger - 
+
+Error starting ApplicationContext. To display the condition evaluation report re-run your application with 'debug' enabled.
+2024-10-10 22:12:26.683 ERROR o.s.boot.SpringApplication - Application run failed
+org.springframework.context.ApplicationContextException: Failed to start bean 'quartzScheduler'
+	at org.springframework.context.support.DefaultLifecycleProcessor.doStart(DefaultLifecycleProcessor.java:288)
+	at org.springframework.context.support.DefaultLifecycleProcessor$LifecycleGroup.start(DefaultLifecycleProcessor.java:472)
+	at java.base/java.lang.Iterable.forEach(Iterable.java:75)
+	at org.springframework.context.support.DefaultLifecycleProcessor.startBeans(DefaultLifecycleProcessor.java:257)
+	at org.springframework.context.support.DefaultLifecycleProcessor.onRefresh(DefaultLifecycleProcessor.java:202)
+	at org.springframework.context.support.AbstractApplicationContext.finishRefresh(AbstractApplicationContext.java:990)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:628)
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:146)
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:754)
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:456)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:335)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1363)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1352)
+	at com.gowri.quartz.QuartzSchedulersSpringBootApplication.main(QuartzSchedulersSpringBootApplication.java:12)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at org.springframework.boot.devtools.restart.RestartLauncher.run(RestartLauncher.java:50)
+Caused by: org.springframework.scheduling.SchedulingException: Could not start Quartz Scheduler
+	at org.springframework.scheduling.quartz.SchedulerFactoryBean.start(SchedulerFactoryBean.java:802)
+	at org.springframework.context.support.DefaultLifecycleProcessor.doStart(DefaultLifecycleProcessor.java:285)
+	... 16 common frames omitted
+Caused by: org.quartz.SchedulerConfigException: Failure occured during job recovery.
+	at org.quartz.impl.jdbcjobstore.JobStoreSupport.schedulerStarted(JobStoreSupport.java:697)
+	at org.quartz.core.QuartzScheduler.start(QuartzScheduler.java:539)
+	at org.quartz.impl.StdScheduler.start(StdScheduler.java:142)
+	at org.springframework.scheduling.quartz.SchedulerFactoryBean.startScheduler(SchedulerFactoryBean.java:730)
+	at org.springframework.scheduling.quartz.SchedulerFactoryBean.start(SchedulerFactoryBean.java:799)
+	... 17 common frames omitted
+Caused by: org.quartz.impl.jdbcjobstore.LockException: Failure obtaining db row lock: Table 'quartzdb.qrtz_locks' doesn't exist
+	at org.quartz.impl.jdbcjobstore.StdRowLockSemaphore.executeSQL(StdRowLockSemaphore.java:184)
+	at org.quartz.impl.jdbcjobstore.DBSemaphore.obtainLock(DBSemaphore.java:113)
+	at org.quartz.impl.jdbcjobstore.JobStoreSupport.executeInNonManagedTXLock(JobStoreSupport.java:3857)
+	at org.quartz.impl.jdbcjobstore.JobStoreSupport.recoverJobs(JobStoreSupport.java:839)
+	at org.quartz.impl.jdbcjobstore.JobStoreSupport.schedulerStarted(JobStoreSupport.java:695)
+	... 21 common frames omitted
+Caused by: java.sql.SQLSyntaxErrorException: Table 'quartzdb.qrtz_locks' doesn't exist
+	at com.mysql.cj.jdbc.exceptions.SQLError.createSQLException(SQLError.java:121)
+	at com.mysql.cj.jdbc.exceptions.SQLExceptionsMapping.translateException(SQLExceptionsMapping.java:122)
+	at com.mysql.cj.jdbc.ClientPreparedStatement.executeInternal(ClientPreparedStatement.java:912)
+	at com.mysql.cj.jdbc.ClientPreparedStatement.executeQuery(ClientPreparedStatement.java:968)
+	at com.zaxxer.hikari.pool.ProxyPreparedStatement.executeQuery(ProxyPreparedStatement.java:52)
+	at com.zaxxer.hikari.pool.HikariProxyPreparedStatement.executeQuery(HikariProxyPreparedStatement.java)
+	at org.quartz.impl.jdbcjobstore.StdRowLockSemaphore.executeSQL(StdRowLockSemaphore.java:123)
+	... 25 common frames omitted
+2024-10-10 23:35:46.129 INFO  c.g.q.QuartzSchedulersSpringBootApplication - Starting QuartzSchedulersSpringBootApplication using Java 21.0.1 with PID 14308 (N:\Pro\Menses\2024\Oct\schedulers\quartzSchedulersSpringBoot\target\classes started by NaveenWodeyar in N:\Pro\Menses\2024\Oct\schedulers\quartzSchedulersSpringBoot)
+2024-10-10 23:35:46.133 INFO  c.g.q.QuartzSchedulersSpringBootApplication - The following 1 profile is active: "UAT"
+2024-10-10 23:35:46.253 INFO  o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor - Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2024-10-10 23:35:46.253 INFO  o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor - For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2024-10-10 23:35:48.215 INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2024-10-10 23:35:48.257 INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 26 ms. Found 0 JPA repository interfaces.
+2024-10-10 23:35:49.660 INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port 8765 (http)
+2024-10-10 23:35:49.682 INFO  o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8765"]
+2024-10-10 23:35:49.691 INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+2024-10-10 23:35:49.691 INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.30]
+2024-10-10 23:35:49.785 INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2024-10-10 23:35:49.785 INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 3531 ms
+2024-10-10 23:35:50.149 DEBUG o.s.w.f.ServerHttpObservationFilter - Filter 'webMvcObservationFilter' configured for use
+2024-10-10 23:35:50.255 INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2024-10-10 23:35:50.956 INFO  com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@59b2600d
+2024-10-10 23:35:50.960 INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+2024-10-10 23:35:52.124 INFO  o.s.o.j.p.SpringPersistenceUnitInfo - No LoadTimeWeaver setup: ignoring JPA class transformer
+2024-10-10 23:35:52.859 INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2024-10-10 23:35:53.064 INFO  org.quartz.impl.StdSchedulerFactory - Using default implementation for ThreadExecutor
+2024-10-10 23:35:53.083 INFO  o.quartz.core.SchedulerSignalerImpl - Initialized Scheduler Signaller of type: class org.quartz.core.SchedulerSignalerImpl
+2024-10-10 23:35:53.084 INFO  org.quartz.core.QuartzScheduler - Quartz Scheduler v.2.3.2 created.
+2024-10-10 23:35:53.089 INFO  o.s.s.quartz.LocalDataSourceJobStore - Using db table-based data access locking (synchronization).
+2024-10-10 23:35:53.094 INFO  o.s.s.quartz.LocalDataSourceJobStore - JobStoreCMT initialized.
+2024-10-10 23:35:53.095 INFO  org.quartz.core.QuartzScheduler - Scheduler meta-data: Quartz Scheduler (v2.3.2) 'quartzScheduler' with instanceId 'NON_CLUSTERED'
+  Scheduler class: 'org.quartz.core.QuartzScheduler' - running locally.
+  NOT STARTED.
+  Currently in standby mode.
+  Number of jobs executed: 0
+  Using thread pool 'org.quartz.simpl.SimpleThreadPool' - with 10 threads.
+  Using job-store 'org.springframework.scheduling.quartz.LocalDataSourceJobStore' - which supports persistence. and is not clustered.
+
+2024-10-10 23:35:53.096 INFO  org.quartz.impl.StdSchedulerFactory - Quartz scheduler 'quartzScheduler' initialized from an externally provided properties instance.
+2024-10-10 23:35:53.097 INFO  org.quartz.impl.StdSchedulerFactory - Quartz scheduler version: 2.3.2
+2024-10-10 23:35:53.097 INFO  org.quartz.core.QuartzScheduler - JobFactory set to: org.springframework.scheduling.quartz.SpringBeanJobFactory@3621597a
+2024-10-10 23:35:53.666 WARN  o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2024-10-10 23:35:53.944 DEBUG o.s.w.s.m.m.a.RequestMappingHandlerMapping - 8 mappings in 'requestMappingHandlerMapping'
+2024-10-10 23:35:53.986 DEBUG o.s.w.s.h.BeanNameUrlHandlerMapping - Detected 1 mappings in 'beanNameHandlerMapping'
+2024-10-10 23:35:54.321 DEBUG o.s.w.s.h.SimpleUrlHandlerMapping - Patterns [/webjars/**, /**, /swagger-ui*/*swagger-initializer.js, /swagger-ui*/**] in 'resourceHandlerMapping'
+2024-10-10 23:35:54.477 DEBUG o.s.w.s.m.m.a.RequestMappingHandlerAdapter - ControllerAdvice beans: 0 @ModelAttribute, 0 @InitBinder, 1 RequestBodyAdvice, 1 ResponseBodyAdvice
+2024-10-10 23:35:54.709 DEBUG o.s.w.s.m.m.a.ExceptionHandlerExceptionResolver - ControllerAdvice beans: 1 @ExceptionHandler, 1 ResponseBodyAdvice
+2024-10-10 23:35:56.270 INFO  o.s.b.d.a.OptionalLiveReloadServer - LiveReload server is running on port 35729
+2024-10-10 23:35:56.293 INFO  o.s.b.a.e.web.EndpointLinksResolver - Exposing 16 endpoints beneath base path '/actuator'
+2024-10-10 23:35:56.460 INFO  o.a.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8765"]
+2024-10-10 23:35:56.495 INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port 8765 (http) with context path '/'
+2024-10-10 23:35:56.497 INFO  o.s.s.quartz.SchedulerFactoryBean - Starting Quartz Scheduler now
+2024-10-10 23:35:58.626 INFO  o.a.coyote.http11.Http11NioProtocol - Stopping ProtocolHandler ["http-nio-8765"]
+2024-10-10 23:35:58.635 WARN  o.s.b.w.s.c.AnnotationConfigServletWebServerApplicationContext - Exception encountered during context initialization - cancelling refresh attempt: org.springframework.context.ApplicationContextException: Failed to start bean 'quartzScheduler'
+2024-10-10 23:35:58.640 INFO  o.s.s.quartz.SchedulerFactoryBean - Shutting down Quartz Scheduler
+2024-10-10 23:35:58.640 INFO  org.quartz.core.QuartzScheduler - Scheduler quartzScheduler_$_NON_CLUSTERED shutting down.
+2024-10-10 23:35:58.641 INFO  org.quartz.core.QuartzScheduler - Scheduler quartzScheduler_$_NON_CLUSTERED paused.
+2024-10-10 23:35:58.641 INFO  org.quartz.core.QuartzScheduler - Scheduler quartzScheduler_$_NON_CLUSTERED shutdown complete.
+2024-10-10 23:35:58.641 INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
+2024-10-10 23:35:58.647 INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
+2024-10-10 23:35:58.661 INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
+2024-10-10 23:35:58.697 INFO  o.s.b.a.l.ConditionEvaluationReportLogger - 
+
+Error starting ApplicationContext. To display the condition evaluation report re-run your application with 'debug' enabled.
+2024-10-10 23:35:58.754 ERROR o.s.boot.SpringApplication - Application run failed
+org.springframework.context.ApplicationContextException: Failed to start bean 'quartzScheduler'
+	at org.springframework.context.support.DefaultLifecycleProcessor.doStart(DefaultLifecycleProcessor.java:288)
+	at org.springframework.context.support.DefaultLifecycleProcessor$LifecycleGroup.start(DefaultLifecycleProcessor.java:472)
+	at java.base/java.lang.Iterable.forEach(Iterable.java:75)
+	at org.springframework.context.support.DefaultLifecycleProcessor.startBeans(DefaultLifecycleProcessor.java:257)
+	at org.springframework.context.support.DefaultLifecycleProcessor.onRefresh(DefaultLifecycleProcessor.java:202)
+	at org.springframework.context.support.AbstractApplicationContext.finishRefresh(AbstractApplicationContext.java:990)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:628)
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:146)
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:754)
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:456)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:335)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1363)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1352)
+	at com.gowri.quartz.QuartzSchedulersSpringBootApplication.main(QuartzSchedulersSpringBootApplication.java:12)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at org.springframework.boot.devtools.restart.RestartLauncher.run(RestartLauncher.java:50)
+Caused by: org.springframework.scheduling.SchedulingException: Could not start Quartz Scheduler
+	at org.springframework.scheduling.quartz.SchedulerFactoryBean.start(SchedulerFactoryBean.java:802)
+	at org.springframework.context.support.DefaultLifecycleProcessor.doStart(DefaultLifecycleProcessor.java:285)
+	... 16 common frames omitted
+Caused by: org.quartz.SchedulerConfigException: Failure occured during job recovery.
+	at org.quartz.impl.jdbcjobstore.JobStoreSupport.schedulerStarted(JobStoreSupport.java:697)
+	at org.quartz.core.QuartzScheduler.start(QuartzScheduler.java:539)
+	at org.quartz.impl.StdScheduler.start(StdScheduler.java:142)
+	at org.springframework.scheduling.quartz.SchedulerFactoryBean.startScheduler(SchedulerFactoryBean.java:730)
+	at org.springframework.scheduling.quartz.SchedulerFactoryBean.start(SchedulerFactoryBean.java:799)
+	... 17 common frames omitted
+Caused by: org.quartz.impl.jdbcjobstore.LockException: Failure obtaining db row lock: Table 'quartzdb.qrtz_locks' doesn't exist
+	at org.quartz.impl.jdbcjobstore.StdRowLockSemaphore.executeSQL(StdRowLockSemaphore.java:184)
+	at org.quartz.impl.jdbcjobstore.DBSemaphore.obtainLock(DBSemaphore.java:113)
+	at org.quartz.impl.jdbcjobstore.JobStoreSupport.executeInNonManagedTXLock(JobStoreSupport.java:3857)
+	at org.quartz.impl.jdbcjobstore.JobStoreSupport.recoverJobs(JobStoreSupport.java:839)
+	at org.quartz.impl.jdbcjobstore.JobStoreSupport.schedulerStarted(JobStoreSupport.java:695)
+	... 21 common frames omitted
+Caused by: java.sql.SQLSyntaxErrorException: Table 'quartzdb.qrtz_locks' doesn't exist
+	at com.mysql.cj.jdbc.exceptions.SQLError.createSQLException(SQLError.java:121)
+	at com.mysql.cj.jdbc.exceptions.SQLExceptionsMapping.translateException(SQLExceptionsMapping.java:122)
+	at com.mysql.cj.jdbc.ClientPreparedStatement.executeInternal(ClientPreparedStatement.java:912)
+	at com.mysql.cj.jdbc.ClientPreparedStatement.executeQuery(ClientPreparedStatement.java:968)
+	at com.zaxxer.hikari.pool.ProxyPreparedStatement.executeQuery(ProxyPreparedStatement.java:52)
+	at com.zaxxer.hikari.pool.HikariProxyPreparedStatement.executeQuery(HikariProxyPreparedStatement.java)
+	at org.quartz.impl.jdbcjobstore.StdRowLockSemaphore.executeSQL(StdRowLockSemaphore.java:123)
+	... 25 common frames omitted
+2024-10-10 23:37:28.641 INFO  c.g.q.QuartzSchedulersSpringBootApplication - Starting QuartzSchedulersSpringBootApplication using Java 21.0.1 with PID 1228 (N:\Pro\Menses\2024\Oct\schedulers\quartzSchedulersSpringBoot\target\classes started by NaveenWodeyar in N:\Pro\Menses\2024\Oct\schedulers\quartzSchedulersSpringBoot)
+2024-10-10 23:37:28.648 INFO  c.g.q.QuartzSchedulersSpringBootApplication - The following 1 profile is active: "UAT"
+2024-10-10 23:37:28.761 INFO  o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor - Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2024-10-10 23:37:28.761 INFO  o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor - For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2024-10-10 23:37:30.888 INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2024-10-10 23:37:30.926 INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 25 ms. Found 0 JPA repository interfaces.
+2024-10-10 23:37:32.547 INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port 8765 (http)
+2024-10-10 23:37:32.566 INFO  o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8765"]
+2024-10-10 23:37:32.573 INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+2024-10-10 23:37:32.574 INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.30]
+2024-10-10 23:37:32.670 INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2024-10-10 23:37:32.670 INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 3908 ms
+2024-10-10 23:37:33.195 DEBUG o.s.w.f.ServerHttpObservationFilter - Filter 'webMvcObservationFilter' configured for use
+2024-10-10 23:37:33.294 INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2024-10-10 23:37:34.136 INFO  com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@3befb2b2
+2024-10-10 23:37:34.139 INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+2024-10-10 23:37:35.850 INFO  o.s.o.j.p.SpringPersistenceUnitInfo - No LoadTimeWeaver setup: ignoring JPA class transformer
+2024-10-10 23:37:36.678 INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2024-10-10 23:37:36.907 INFO  org.quartz.impl.StdSchedulerFactory - Using default implementation for ThreadExecutor
+2024-10-10 23:37:36.952 INFO  o.quartz.core.SchedulerSignalerImpl - Initialized Scheduler Signaller of type: class org.quartz.core.SchedulerSignalerImpl
+2024-10-10 23:37:36.953 INFO  org.quartz.core.QuartzScheduler - Quartz Scheduler v.2.3.2 created.
+2024-10-10 23:37:36.958 INFO  o.s.s.quartz.LocalDataSourceJobStore - Using db table-based data access locking (synchronization).
+2024-10-10 23:37:36.967 INFO  o.s.s.quartz.LocalDataSourceJobStore - JobStoreCMT initialized.
+2024-10-10 23:37:36.969 INFO  org.quartz.core.QuartzScheduler - Scheduler meta-data: Quartz Scheduler (v2.3.2) 'quartzScheduler' with instanceId 'NON_CLUSTERED'
+  Scheduler class: 'org.quartz.core.QuartzScheduler' - running locally.
+  NOT STARTED.
+  Currently in standby mode.
+  Number of jobs executed: 0
+  Using thread pool 'org.quartz.simpl.SimpleThreadPool' - with 10 threads.
+  Using job-store 'org.springframework.scheduling.quartz.LocalDataSourceJobStore' - which supports persistence. and is not clustered.
+
+2024-10-10 23:37:36.970 INFO  org.quartz.impl.StdSchedulerFactory - Quartz scheduler 'quartzScheduler' initialized from an externally provided properties instance.
+2024-10-10 23:37:36.970 INFO  org.quartz.impl.StdSchedulerFactory - Quartz scheduler version: 2.3.2
+2024-10-10 23:37:36.970 INFO  org.quartz.core.QuartzScheduler - JobFactory set to: org.springframework.scheduling.quartz.SpringBeanJobFactory@534457fa
+2024-10-10 23:37:37.557 WARN  o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2024-10-10 23:37:37.838 DEBUG o.s.w.s.m.m.a.RequestMappingHandlerMapping - 8 mappings in 'requestMappingHandlerMapping'
+2024-10-10 23:37:37.920 DEBUG o.s.w.s.h.BeanNameUrlHandlerMapping - Detected 1 mappings in 'beanNameHandlerMapping'
+2024-10-10 23:37:38.586 DEBUG o.s.w.s.h.SimpleUrlHandlerMapping - Patterns [/webjars/**, /**, /swagger-ui*/*swagger-initializer.js, /swagger-ui*/**] in 'resourceHandlerMapping'
+2024-10-10 23:37:38.741 DEBUG o.s.w.s.m.m.a.RequestMappingHandlerAdapter - ControllerAdvice beans: 0 @ModelAttribute, 0 @InitBinder, 1 RequestBodyAdvice, 1 ResponseBodyAdvice
+2024-10-10 23:37:38.868 DEBUG o.s.w.s.m.m.a.ExceptionHandlerExceptionResolver - ControllerAdvice beans: 1 @ExceptionHandler, 1 ResponseBodyAdvice
+2024-10-10 23:37:40.296 INFO  o.s.b.d.a.OptionalLiveReloadServer - LiveReload server is running on port 35729
+2024-10-10 23:37:40.316 INFO  o.s.b.a.e.web.EndpointLinksResolver - Exposing 16 endpoints beneath base path '/actuator'
+2024-10-10 23:37:40.490 INFO  o.a.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8765"]
+2024-10-10 23:37:40.558 INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port 8765 (http) with context path '/'
+2024-10-10 23:37:40.566 INFO  o.s.s.quartz.SchedulerFactoryBean - Starting Quartz Scheduler now
+2024-10-10 23:37:40.638 INFO  o.s.s.quartz.LocalDataSourceJobStore - Freed 0 triggers from 'acquired' / 'blocked' state.
+2024-10-10 23:37:40.648 INFO  o.s.s.quartz.LocalDataSourceJobStore - Recovering 0 jobs that were in-progress at the time of the last shut-down.
+2024-10-10 23:37:40.649 INFO  o.s.s.quartz.LocalDataSourceJobStore - Recovery complete.
+2024-10-10 23:37:40.651 INFO  o.s.s.quartz.LocalDataSourceJobStore - Removed 0 'complete' triggers.
+2024-10-10 23:37:40.653 INFO  o.s.s.quartz.LocalDataSourceJobStore - Removed 0 stale fired job entries.
+2024-10-10 23:37:40.661 INFO  org.quartz.core.QuartzScheduler - Scheduler quartzScheduler_$_NON_CLUSTERED started.
+2024-10-10 23:37:40.696 INFO  c.g.q.QuartzSchedulersSpringBootApplication - Started QuartzSchedulersSpringBootApplication in 12.914 seconds (process running for 14.374)
+2024-10-10 23:37:41.468 INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2024-10-10 23:37:41.468 INFO  o.s.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+2024-10-10 23:37:41.468 DEBUG o.s.web.servlet.DispatcherServlet - Detected StandardServletMultipartResolver
+2024-10-10 23:37:41.469 DEBUG o.s.web.servlet.DispatcherServlet - Detected AcceptHeaderLocaleResolver
+2024-10-10 23:37:41.469 DEBUG o.s.web.servlet.DispatcherServlet - Detected FixedThemeResolver
+2024-10-10 23:37:41.472 DEBUG o.s.web.servlet.DispatcherServlet - Detected org.springframework.web.servlet.view.DefaultRequestToViewNameTranslator@170d12be
+2024-10-10 23:37:41.473 DEBUG o.s.web.servlet.DispatcherServlet - Detected org.springframework.web.servlet.support.SessionFlashMapManager@6b1ab7ed
+2024-10-10 23:37:41.473 DEBUG o.s.web.servlet.DispatcherServlet - enableLoggingRequestDetails='false': request parameters and headers will be masked to prevent unsafe logging of potentially sensitive data
+2024-10-10 23:37:41.473 INFO  o.s.web.servlet.DispatcherServlet - Completed initialization in 5 ms
+2024-10-10 23:38:33.801 DEBUG o.s.web.servlet.DispatcherServlet - GET "/api/v1", parameters={}
+2024-10-10 23:38:33.842 DEBUG o.s.w.s.h.BeanNameUrlHandlerMapping - Mapped to com.gowri.quartz.controller.EmailSchedulerController@5b710c6d
+2024-10-10 23:38:33.853 DEBUG o.s.web.servlet.DispatcherServlet - Failed to complete request: jakarta.servlet.ServletException: No adapter for handler [com.gowri.quartz.controller.EmailSchedulerController@5b710c6d]: The DispatcherServlet configuration needs to include a HandlerAdapter that supports this handler
+2024-10-10 23:38:33.863 ERROR o.a.c.c.C.[.[.[.[dispatcherServlet] - Servlet.service() for servlet [dispatcherServlet] in context with path [] threw exception [No adapter for handler [com.gowri.quartz.controller.EmailSchedulerController@5b710c6d]: The DispatcherServlet configuration needs to include a HandlerAdapter that supports this handler] with root cause
+jakarta.servlet.ServletException: No adapter for handler [com.gowri.quartz.controller.EmailSchedulerController@5b710c6d]: The DispatcherServlet configuration needs to include a HandlerAdapter that supports this handler
+	at org.springframework.web.servlet.DispatcherServlet.getHandlerAdapter(DispatcherServlet.java:1325)
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1072)
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:979)
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1014)
+	at org.springframework.web.servlet.FrameworkServlet.doGet(FrameworkServlet.java:903)
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:564)
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:885)
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:658)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:195)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140)
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:51)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140)
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140)
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140)
+	at org.springframework.web.filter.ServerHttpObservationFilter.doFilterInternal(ServerHttpObservationFilter.java:113)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140)
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:167)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:90)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:483)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:115)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:93)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:74)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:344)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:384)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:63)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:905)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1741)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:52)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1190)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:63)
+	at java.base/java.lang.Thread.run(Thread.java:1583)
+2024-10-10 23:38:33.921 DEBUG o.s.web.servlet.DispatcherServlet - "ERROR" dispatch for GET "/error", parameters={}
+2024-10-10 23:38:33.934 DEBUG o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped to org.springframework.boot.autoconfigure.web.servlet.error.BasicErrorController#errorHtml(HttpServletRequest, HttpServletResponse)
+2024-10-10 23:38:34.084 DEBUG o.s.w.s.v.ContentNegotiatingViewResolver - Selected 'text/html' given [text/html, text/html;q=0.8]
+2024-10-10 23:38:34.126 DEBUG o.s.web.servlet.DispatcherServlet - Exiting from "ERROR" dispatch, status 500
+2024-10-10 23:38:34.959 DEBUG o.s.web.servlet.DispatcherServlet - GET "/favicon.ico", parameters={}
+2024-10-10 23:38:34.966 DEBUG o.s.w.s.h.SimpleUrlHandlerMapping - Mapped to ResourceHttpRequestHandler [classpath [META-INF/resources/], classpath [resources/], classpath [static/], classpath [public/], ServletContext [/]]
+2024-10-10 23:38:34.977 DEBUG o.s.w.s.r.ResourceHttpRequestHandler - Resource not found
+2024-10-10 23:38:34.991 DEBUG o.s.w.s.m.s.DefaultHandlerExceptionResolver - Resolved [org.springframework.web.servlet.resource.NoResourceFoundException: No static resource favicon.ico.]
+2024-10-10 23:38:34.993 DEBUG o.s.web.servlet.DispatcherServlet - Completed 404 NOT_FOUND
+2024-10-10 23:38:34.996 DEBUG o.s.web.servlet.DispatcherServlet - "ERROR" dispatch for GET "/error", parameters={}
+2024-10-10 23:38:35.002 DEBUG o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped to org.springframework.boot.autoconfigure.web.servlet.error.BasicErrorController#error(HttpServletRequest)
+2024-10-10 23:38:35.026 DEBUG o.s.w.s.m.m.a.HttpEntityMethodProcessor - Using 'application/json;q=0.8', given [image/avif, image/webp, image/apng, image/svg+xml, image/*, */*;q=0.8] and supported [application/json, application/*+json]
+2024-10-10 23:38:35.030 DEBUG o.s.w.s.m.m.a.HttpEntityMethodProcessor - Writing [{timestamp=Thu Oct 10 23:38:35 IST 2024, status=404, error=Not Found, trace=org.springframework.web. (truncated)...]
+2024-10-10 23:38:35.082 DEBUG o.s.web.servlet.DispatcherServlet - Exiting from "ERROR" dispatch, status 404
+2024-10-10 23:40:35.942 DEBUG o.s.web.servlet.DispatcherServlet - GET "/api/v1", parameters={}
+2024-10-10 23:40:35.943 DEBUG o.s.w.s.h.BeanNameUrlHandlerMapping - Mapped to com.gowri.quartz.controller.EmailSchedulerController@5b710c6d
+2024-10-10 23:40:35.944 DEBUG o.s.web.servlet.DispatcherServlet - Failed to complete request: jakarta.servlet.ServletException: No adapter for handler [com.gowri.quartz.controller.EmailSchedulerController@5b710c6d]: The DispatcherServlet configuration needs to include a HandlerAdapter that supports this handler
+2024-10-10 23:40:35.945 ERROR o.a.c.c.C.[.[.[.[dispatcherServlet] - Servlet.service() for servlet [dispatcherServlet] in context with path [] threw exception [No adapter for handler [com.gowri.quartz.controller.EmailSchedulerController@5b710c6d]: The DispatcherServlet configuration needs to include a HandlerAdapter that supports this handler] with root cause
+jakarta.servlet.ServletException: No adapter for handler [com.gowri.quartz.controller.EmailSchedulerController@5b710c6d]: The DispatcherServlet configuration needs to include a HandlerAdapter that supports this handler
+	at org.springframework.web.servlet.DispatcherServlet.getHandlerAdapter(DispatcherServlet.java:1325)
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1072)
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:979)
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1014)
+	at org.springframework.web.servlet.FrameworkServlet.doGet(FrameworkServlet.java:903)
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:564)
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:885)
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:658)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:195)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140)
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:51)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140)
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140)
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140)
+	at org.springframework.web.filter.ServerHttpObservationFilter.doFilterInternal(ServerHttpObservationFilter.java:113)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140)
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:167)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:90)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:483)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:115)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:93)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:74)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:344)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:384)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:63)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:905)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1741)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:52)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1190)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:63)
+	at java.base/java.lang.Thread.run(Thread.java:1583)
+2024-10-10 23:40:35.950 DEBUG o.s.web.servlet.DispatcherServlet - "ERROR" dispatch for GET "/error", parameters={}
+2024-10-10 23:40:35.951 DEBUG o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped to org.springframework.boot.autoconfigure.web.servlet.error.BasicErrorController#error(HttpServletRequest)
+2024-10-10 23:40:35.954 DEBUG o.s.w.s.m.m.a.HttpEntityMethodProcessor - Using 'application/json', given [*/*] and supported [application/json, application/*+json]
+2024-10-10 23:40:35.955 DEBUG o.s.w.s.m.m.a.HttpEntityMethodProcessor - Writing [{timestamp=Thu Oct 10 23:40:35 IST 2024, status=500, error=Internal Server Error, trace=jakarta.serv (truncated)...]
+2024-10-10 23:40:35.959 DEBUG o.s.web.servlet.DispatcherServlet - Exiting from "ERROR" dispatch, status 500
+2024-10-10 23:41:21.824 INFO  o.s.b.d.a.LocalDevToolsAutoConfiguration$RestartingClassPathChangeChangedEventListener - Restarting due to 1 class path change (0 additions, 0 deletions, 1 modification)
+2024-10-10 23:41:21.836 INFO  org.quartz.core.QuartzScheduler - Scheduler quartzScheduler_$_NON_CLUSTERED paused.
+2024-10-10 23:41:21.843 INFO  o.a.coyote.http11.Http11NioProtocol - Stopping ProtocolHandler ["http-nio-8765"]
+2024-10-10 23:41:21.871 INFO  o.s.s.quartz.SchedulerFactoryBean - Shutting down Quartz Scheduler
+2024-10-10 23:41:21.872 INFO  org.quartz.core.QuartzScheduler - Scheduler quartzScheduler_$_NON_CLUSTERED shutting down.
+2024-10-10 23:41:21.874 INFO  org.quartz.core.QuartzScheduler - Scheduler quartzScheduler_$_NON_CLUSTERED paused.
+2024-10-10 23:41:21.881 INFO  org.quartz.core.QuartzScheduler - Scheduler quartzScheduler_$_NON_CLUSTERED shutdown complete.
+2024-10-10 23:41:21.882 INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
+2024-10-10 23:41:21.894 INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
+2024-10-10 23:41:21.926 INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
+2024-10-10 23:41:22.405 INFO  c.g.q.QuartzSchedulersSpringBootApplication - Starting QuartzSchedulersSpringBootApplication using Java 21.0.1 with PID 1228 (N:\Pro\Menses\2024\Oct\schedulers\quartzSchedulersSpringBoot\target\classes started by NaveenWodeyar in N:\Pro\Menses\2024\Oct\schedulers\quartzSchedulersSpringBoot)
+2024-10-10 23:41:22.405 INFO  c.g.q.QuartzSchedulersSpringBootApplication - The following 1 profile is active: "UAT"
+2024-10-10 23:41:23.640 INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2024-10-10 23:41:23.658 INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 16 ms. Found 0 JPA repository interfaces.
+2024-10-10 23:41:24.130 INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port 8765 (http)
+2024-10-10 23:41:24.134 INFO  o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8765"]
+2024-10-10 23:41:24.135 INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+2024-10-10 23:41:24.136 INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.30]
+2024-10-10 23:41:24.194 INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2024-10-10 23:41:24.195 INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 1781 ms
+2024-10-10 23:41:24.428 DEBUG o.s.w.f.ServerHttpObservationFilter - Filter 'webMvcObservationFilter' configured for use
+2024-10-10 23:41:24.634 INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-2 - Starting...
+2024-10-10 23:41:24.703 INFO  com.zaxxer.hikari.pool.HikariPool - HikariPool-2 - Added connection com.mysql.cj.jdbc.ConnectionImpl@d457bf3
+2024-10-10 23:41:24.703 INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-2 - Start completed.
+2024-10-10 23:41:24.858 INFO  o.s.o.j.p.SpringPersistenceUnitInfo - No LoadTimeWeaver setup: ignoring JPA class transformer
+2024-10-10 23:41:25.006 INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2024-10-10 23:41:25.191 INFO  org.quartz.impl.StdSchedulerFactory - Using default implementation for ThreadExecutor
+2024-10-10 23:41:25.193 INFO  o.quartz.core.SchedulerSignalerImpl - Initialized Scheduler Signaller of type: class org.quartz.core.SchedulerSignalerImpl
+2024-10-10 23:41:25.193 INFO  org.quartz.core.QuartzScheduler - Quartz Scheduler v.2.3.2 created.
+2024-10-10 23:41:25.194 INFO  o.s.s.quartz.LocalDataSourceJobStore - Using db table-based data access locking (synchronization).
+2024-10-10 23:41:25.194 INFO  o.s.s.quartz.LocalDataSourceJobStore - JobStoreCMT initialized.
+2024-10-10 23:41:25.194 INFO  org.quartz.core.QuartzScheduler - Scheduler meta-data: Quartz Scheduler (v2.3.2) 'quartzScheduler' with instanceId 'NON_CLUSTERED'
+  Scheduler class: 'org.quartz.core.QuartzScheduler' - running locally.
+  NOT STARTED.
+  Currently in standby mode.
+  Number of jobs executed: 0
+  Using thread pool 'org.quartz.simpl.SimpleThreadPool' - with 10 threads.
+  Using job-store 'org.springframework.scheduling.quartz.LocalDataSourceJobStore' - which supports persistence. and is not clustered.
+
+2024-10-10 23:41:25.194 INFO  org.quartz.impl.StdSchedulerFactory - Quartz scheduler 'quartzScheduler' initialized from an externally provided properties instance.
+2024-10-10 23:41:25.195 INFO  org.quartz.impl.StdSchedulerFactory - Quartz scheduler version: 2.3.2
+2024-10-10 23:41:25.195 INFO  org.quartz.core.QuartzScheduler - JobFactory set to: org.springframework.scheduling.quartz.SpringBeanJobFactory@37d93b9f
+2024-10-10 23:41:25.522 WARN  o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2024-10-10 23:41:25.691 DEBUG o.s.w.s.m.m.a.RequestMappingHandlerMapping - 8 mappings in 'requestMappingHandlerMapping'
+2024-10-10 23:41:25.729 DEBUG o.s.w.s.h.BeanNameUrlHandlerMapping - Detected 1 mappings in 'beanNameHandlerMapping'
+2024-10-10 23:41:25.929 DEBUG o.s.w.s.h.SimpleUrlHandlerMapping - Patterns [/webjars/**, /**, /swagger-ui*/*swagger-initializer.js, /swagger-ui*/**] in 'resourceHandlerMapping'
+2024-10-10 23:41:25.994 DEBUG o.s.w.s.m.m.a.RequestMappingHandlerAdapter - ControllerAdvice beans: 0 @ModelAttribute, 0 @InitBinder, 1 RequestBodyAdvice, 1 ResponseBodyAdvice
+2024-10-10 23:41:26.031 DEBUG o.s.w.s.m.m.a.ExceptionHandlerExceptionResolver - ControllerAdvice beans: 1 @ExceptionHandler, 1 ResponseBodyAdvice
+2024-10-10 23:41:27.667 INFO  o.s.b.d.a.OptionalLiveReloadServer - LiveReload server is running on port 35729
+2024-10-10 23:41:27.701 INFO  o.s.b.a.e.web.EndpointLinksResolver - Exposing 16 endpoints beneath base path '/actuator'
+2024-10-10 23:41:27.897 INFO  o.a.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8765"]
+2024-10-10 23:41:27.906 INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port 8765 (http) with context path '/'
+2024-10-10 23:41:27.908 INFO  o.s.s.quartz.SchedulerFactoryBean - Starting Quartz Scheduler now
+2024-10-10 23:41:27.938 INFO  o.s.s.quartz.LocalDataSourceJobStore - Freed 0 triggers from 'acquired' / 'blocked' state.
+2024-10-10 23:41:27.945 INFO  o.s.s.quartz.LocalDataSourceJobStore - Recovering 0 jobs that were in-progress at the time of the last shut-down.
+2024-10-10 23:41:27.947 INFO  o.s.s.quartz.LocalDataSourceJobStore - Recovery complete.
+2024-10-10 23:41:27.949 INFO  o.s.s.quartz.LocalDataSourceJobStore - Removed 0 'complete' triggers.
+2024-10-10 23:41:27.951 INFO  o.s.s.quartz.LocalDataSourceJobStore - Removed 0 stale fired job entries.
+2024-10-10 23:41:27.955 INFO  org.quartz.core.QuartzScheduler - Scheduler quartzScheduler_$_NON_CLUSTERED started.
+2024-10-10 23:41:27.989 INFO  c.g.q.QuartzSchedulersSpringBootApplication - Started QuartzSchedulersSpringBootApplication in 5.889 seconds (process running for 241.667)
+2024-10-10 23:41:27.998 INFO  o.s.b.d.a.ConditionEvaluationDeltaLoggingListener - Condition evaluation unchanged
+2024-10-10 23:41:32.292 INFO  o.s.b.d.a.LocalDevToolsAutoConfiguration$RestartingClassPathChangeChangedEventListener - Restarting due to 1 class path change (0 additions, 0 deletions, 1 modification)
+2024-10-10 23:41:32.296 INFO  org.quartz.core.QuartzScheduler - Scheduler quartzScheduler_$_NON_CLUSTERED paused.
+2024-10-10 23:41:32.369 INFO  o.a.coyote.http11.Http11NioProtocol - Stopping ProtocolHandler ["http-nio-8765"]
+2024-10-10 23:41:32.399 INFO  o.s.s.quartz.SchedulerFactoryBean - Shutting down Quartz Scheduler
+2024-10-10 23:41:32.399 INFO  org.quartz.core.QuartzScheduler - Scheduler quartzScheduler_$_NON_CLUSTERED shutting down.
+2024-10-10 23:41:32.400 INFO  org.quartz.core.QuartzScheduler - Scheduler quartzScheduler_$_NON_CLUSTERED paused.
+2024-10-10 23:41:32.400 INFO  org.quartz.core.QuartzScheduler - Scheduler quartzScheduler_$_NON_CLUSTERED shutdown complete.
+2024-10-10 23:41:32.401 INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
+2024-10-10 23:41:32.408 INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-2 - Shutdown initiated...
+2024-10-10 23:41:32.479 INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-2 - Shutdown completed.
+2024-10-10 23:41:32.807 INFO  c.g.q.QuartzSchedulersSpringBootApplication - Starting QuartzSchedulersSpringBootApplication using Java 21.0.1 with PID 1228 (N:\Pro\Menses\2024\Oct\schedulers\quartzSchedulersSpringBoot\target\classes started by NaveenWodeyar in N:\Pro\Menses\2024\Oct\schedulers\quartzSchedulersSpringBoot)
+2024-10-10 23:41:32.808 INFO  c.g.q.QuartzSchedulersSpringBootApplication - The following 1 profile is active: "UAT"
+2024-10-10 23:41:33.913 INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2024-10-10 23:41:33.924 INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 9 ms. Found 0 JPA repository interfaces.
+2024-10-10 23:41:34.430 INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port 8765 (http)
+2024-10-10 23:41:34.432 INFO  o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8765"]
+2024-10-10 23:41:34.433 INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+2024-10-10 23:41:34.433 INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.30]
+2024-10-10 23:41:34.506 INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2024-10-10 23:41:34.506 INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 1690 ms
+2024-10-10 23:41:34.763 DEBUG o.s.w.f.ServerHttpObservationFilter - Filter 'webMvcObservationFilter' configured for use
+2024-10-10 23:41:34.838 INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-3 - Starting...
+2024-10-10 23:41:34.879 INFO  com.zaxxer.hikari.pool.HikariPool - HikariPool-3 - Added connection com.mysql.cj.jdbc.ConnectionImpl@78f62ada
+2024-10-10 23:41:34.879 INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-3 - Start completed.
+2024-10-10 23:41:35.033 INFO  o.s.o.j.p.SpringPersistenceUnitInfo - No LoadTimeWeaver setup: ignoring JPA class transformer
+2024-10-10 23:41:35.078 INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2024-10-10 23:41:35.199 INFO  org.quartz.impl.StdSchedulerFactory - Using default implementation for ThreadExecutor
+2024-10-10 23:41:35.201 INFO  o.quartz.core.SchedulerSignalerImpl - Initialized Scheduler Signaller of type: class org.quartz.core.SchedulerSignalerImpl
+2024-10-10 23:41:35.202 INFO  org.quartz.core.QuartzScheduler - Quartz Scheduler v.2.3.2 created.
+2024-10-10 23:41:35.203 INFO  o.s.s.quartz.LocalDataSourceJobStore - Using db table-based data access locking (synchronization).
+2024-10-10 23:41:35.203 INFO  o.s.s.quartz.LocalDataSourceJobStore - JobStoreCMT initialized.
+2024-10-10 23:41:35.203 INFO  org.quartz.core.QuartzScheduler - Scheduler meta-data: Quartz Scheduler (v2.3.2) 'quartzScheduler' with instanceId 'NON_CLUSTERED'
+  Scheduler class: 'org.quartz.core.QuartzScheduler' - running locally.
+  NOT STARTED.
+  Currently in standby mode.
+  Number of jobs executed: 0
+  Using thread pool 'org.quartz.simpl.SimpleThreadPool' - with 10 threads.
+  Using job-store 'org.springframework.scheduling.quartz.LocalDataSourceJobStore' - which supports persistence. and is not clustered.
+
+2024-10-10 23:41:35.203 INFO  org.quartz.impl.StdSchedulerFactory - Quartz scheduler 'quartzScheduler' initialized from an externally provided properties instance.
+2024-10-10 23:41:35.203 INFO  org.quartz.impl.StdSchedulerFactory - Quartz scheduler version: 2.3.2
+2024-10-10 23:41:35.203 INFO  org.quartz.core.QuartzScheduler - JobFactory set to: org.springframework.scheduling.quartz.SpringBeanJobFactory@1500a7d2
+2024-10-10 23:41:35.515 WARN  o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2024-10-10 23:41:35.679 DEBUG o.s.w.s.m.m.a.RequestMappingHandlerMapping - 8 mappings in 'requestMappingHandlerMapping'
+2024-10-10 23:41:36.024 DEBUG o.s.w.s.h.SimpleUrlHandlerMapping - Patterns [/webjars/**, /**, /swagger-ui*/*swagger-initializer.js, /swagger-ui*/**] in 'resourceHandlerMapping'
+2024-10-10 23:41:36.096 DEBUG o.s.w.s.m.m.a.RequestMappingHandlerAdapter - ControllerAdvice beans: 0 @ModelAttribute, 0 @InitBinder, 1 RequestBodyAdvice, 1 ResponseBodyAdvice
+2024-10-10 23:41:36.150 DEBUG o.s.w.s.m.m.a.ExceptionHandlerExceptionResolver - ControllerAdvice beans: 1 @ExceptionHandler, 1 ResponseBodyAdvice
+2024-10-10 23:41:37.328 INFO  o.s.b.d.a.OptionalLiveReloadServer - LiveReload server is running on port 35729
+2024-10-10 23:41:37.346 INFO  o.s.b.a.e.web.EndpointLinksResolver - Exposing 16 endpoints beneath base path '/actuator'
+2024-10-10 23:41:37.439 INFO  o.a.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8765"]
+2024-10-10 23:41:37.451 INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port 8765 (http) with context path '/'
+2024-10-10 23:41:37.452 INFO  o.s.s.quartz.SchedulerFactoryBean - Starting Quartz Scheduler now
+2024-10-10 23:41:37.477 INFO  o.s.s.quartz.LocalDataSourceJobStore - Freed 0 triggers from 'acquired' / 'blocked' state.
+2024-10-10 23:41:37.483 INFO  o.s.s.quartz.LocalDataSourceJobStore - Recovering 0 jobs that were in-progress at the time of the last shut-down.
+2024-10-10 23:41:37.483 INFO  o.s.s.quartz.LocalDataSourceJobStore - Recovery complete.
+2024-10-10 23:41:37.485 INFO  o.s.s.quartz.LocalDataSourceJobStore - Removed 0 'complete' triggers.
+2024-10-10 23:41:37.487 INFO  o.s.s.quartz.LocalDataSourceJobStore - Removed 0 stale fired job entries.
+2024-10-10 23:41:37.489 INFO  org.quartz.core.QuartzScheduler - Scheduler quartzScheduler_$_NON_CLUSTERED started.
+2024-10-10 23:41:37.518 INFO  c.g.q.QuartzSchedulersSpringBootApplication - Started QuartzSchedulersSpringBootApplication in 4.842 seconds (process running for 251.196)
+2024-10-10 23:41:37.524 INFO  o.s.b.d.a.ConditionEvaluationDeltaLoggingListener - Condition evaluation unchanged
+2024-10-10 23:42:00.678 INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2024-10-10 23:42:00.678 INFO  o.s.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+2024-10-10 23:42:00.678 DEBUG o.s.web.servlet.DispatcherServlet - Detected StandardServletMultipartResolver
+2024-10-10 23:42:00.679 DEBUG o.s.web.servlet.DispatcherServlet - Detected AcceptHeaderLocaleResolver
+2024-10-10 23:42:00.683 DEBUG o.s.web.servlet.DispatcherServlet - Detected FixedThemeResolver
+2024-10-10 23:42:00.687 DEBUG o.s.web.servlet.DispatcherServlet - Detected org.springframework.web.servlet.view.DefaultRequestToViewNameTranslator@273a46e4
+2024-10-10 23:42:00.688 DEBUG o.s.web.servlet.DispatcherServlet - Detected org.springframework.web.servlet.support.SessionFlashMapManager@b9df1fa
+2024-10-10 23:42:00.688 DEBUG o.s.web.servlet.DispatcherServlet - enableLoggingRequestDetails='false': request parameters and headers will be masked to prevent unsafe logging of potentially sensitive data
+2024-10-10 23:42:00.688 INFO  o.s.web.servlet.DispatcherServlet - Completed initialization in 10 ms
+2024-10-10 23:42:00.698 DEBUG o.s.web.servlet.DispatcherServlet - GET "/api/v1", parameters={}
+2024-10-10 23:42:00.700 DEBUG o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped to com.gowri.quartz.controller.EmailSchedulerController#test()
+2024-10-10 23:42:00.707 DEBUG o.s.w.s.m.m.a.HttpEntityMethodProcessor - Using 'text/html', given [text/html, application/xhtml+xml, image/avif, image/webp, image/apng, application/xml;q=0.9, */*;q=0.8, application/signed-exchange;v=b3;q=0.7] and supported [text/plain, */*, application/json, application/*+json]
+2024-10-10 23:42:00.708 DEBUG o.s.w.s.m.m.a.HttpEntityMethodProcessor - Writing ["connected!,"]
+2024-10-10 23:42:00.713 DEBUG o.s.web.servlet.DispatcherServlet - Completed 200 OK
+2024-10-10 23:42:38.436 INFO  o.s.b.d.a.LocalDevToolsAutoConfiguration$RestartingClassPathChangeChangedEventListener - Restarting due to 1 class path change (0 additions, 0 deletions, 1 modification)
+2024-10-10 23:42:38.438 INFO  org.quartz.core.QuartzScheduler - Scheduler quartzScheduler_$_NON_CLUSTERED paused.
+2024-10-10 23:42:38.438 INFO  o.a.coyote.http11.Http11NioProtocol - Stopping ProtocolHandler ["http-nio-8765"]
+2024-10-10 23:42:38.447 INFO  o.s.s.quartz.SchedulerFactoryBean - Shutting down Quartz Scheduler
+2024-10-10 23:42:38.447 INFO  org.quartz.core.QuartzScheduler - Scheduler quartzScheduler_$_NON_CLUSTERED shutting down.
+2024-10-10 23:42:38.448 INFO  org.quartz.core.QuartzScheduler - Scheduler quartzScheduler_$_NON_CLUSTERED paused.
+2024-10-10 23:42:38.449 INFO  org.quartz.core.QuartzScheduler - Scheduler quartzScheduler_$_NON_CLUSTERED shutdown complete.
+2024-10-10 23:42:38.450 INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
+2024-10-10 23:42:38.452 INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-3 - Shutdown initiated...
+2024-10-10 23:42:38.559 INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-3 - Shutdown completed.
+2024-10-10 23:42:38.786 INFO  c.g.q.QuartzSchedulersSpringBootApplication - Starting QuartzSchedulersSpringBootApplication using Java 21.0.1 with PID 1228 (N:\Pro\Menses\2024\Oct\schedulers\quartzSchedulersSpringBoot\target\classes started by NaveenWodeyar in N:\Pro\Menses\2024\Oct\schedulers\quartzSchedulersSpringBoot)
+2024-10-10 23:42:38.787 INFO  c.g.q.QuartzSchedulersSpringBootApplication - The following 1 profile is active: "UAT"
+2024-10-10 23:42:39.258 INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2024-10-10 23:42:39.262 INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 3 ms. Found 0 JPA repository interfaces.
+2024-10-10 23:42:39.629 INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port 8765 (http)
+2024-10-10 23:42:39.636 INFO  o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8765"]
+2024-10-10 23:42:39.637 INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+2024-10-10 23:42:39.638 INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.30]
+2024-10-10 23:42:39.681 INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2024-10-10 23:42:39.681 INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 891 ms
+2024-10-10 23:42:39.856 DEBUG o.s.w.f.ServerHttpObservationFilter - Filter 'webMvcObservationFilter' configured for use
+2024-10-10 23:42:39.912 INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-4 - Starting...
+2024-10-10 23:42:39.940 INFO  com.zaxxer.hikari.pool.HikariPool - HikariPool-4 - Added connection com.mysql.cj.jdbc.ConnectionImpl@1e4b6816
+2024-10-10 23:42:39.940 INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-4 - Start completed.
+2024-10-10 23:42:40.012 INFO  o.s.o.j.p.SpringPersistenceUnitInfo - No LoadTimeWeaver setup: ignoring JPA class transformer
+2024-10-10 23:42:40.039 INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2024-10-10 23:42:40.120 INFO  org.quartz.impl.StdSchedulerFactory - Using default implementation for ThreadExecutor
+2024-10-10 23:42:40.123 INFO  o.quartz.core.SchedulerSignalerImpl - Initialized Scheduler Signaller of type: class org.quartz.core.SchedulerSignalerImpl
+2024-10-10 23:42:40.123 INFO  org.quartz.core.QuartzScheduler - Quartz Scheduler v.2.3.2 created.
+2024-10-10 23:42:40.123 INFO  o.s.s.quartz.LocalDataSourceJobStore - Using db table-based data access locking (synchronization).
+2024-10-10 23:42:40.123 INFO  o.s.s.quartz.LocalDataSourceJobStore - JobStoreCMT initialized.
+2024-10-10 23:42:40.123 INFO  org.quartz.core.QuartzScheduler - Scheduler meta-data: Quartz Scheduler (v2.3.2) 'quartzScheduler' with instanceId 'NON_CLUSTERED'
+  Scheduler class: 'org.quartz.core.QuartzScheduler' - running locally.
+  NOT STARTED.
+  Currently in standby mode.
+  Number of jobs executed: 0
+  Using thread pool 'org.quartz.simpl.SimpleThreadPool' - with 10 threads.
+  Using job-store 'org.springframework.scheduling.quartz.LocalDataSourceJobStore' - which supports persistence. and is not clustered.
+
+2024-10-10 23:42:40.123 INFO  org.quartz.impl.StdSchedulerFactory - Quartz scheduler 'quartzScheduler' initialized from an externally provided properties instance.
+2024-10-10 23:42:40.123 INFO  org.quartz.impl.StdSchedulerFactory - Quartz scheduler version: 2.3.2
+2024-10-10 23:42:40.124 INFO  org.quartz.core.QuartzScheduler - JobFactory set to: org.springframework.scheduling.quartz.SpringBeanJobFactory@5be0465b
+2024-10-10 23:42:40.324 WARN  o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2024-10-10 23:42:40.450 DEBUG o.s.w.s.m.m.a.RequestMappingHandlerMapping - 8 mappings in 'requestMappingHandlerMapping'
+2024-10-10 23:42:40.589 DEBUG o.s.w.s.h.SimpleUrlHandlerMapping - Patterns [/webjars/**, /**, /swagger-ui*/*swagger-initializer.js, /swagger-ui*/**] in 'resourceHandlerMapping'
+2024-10-10 23:42:40.622 DEBUG o.s.w.s.m.m.a.RequestMappingHandlerAdapter - ControllerAdvice beans: 0 @ModelAttribute, 0 @InitBinder, 1 RequestBodyAdvice, 1 ResponseBodyAdvice
+2024-10-10 23:42:40.641 DEBUG o.s.w.s.m.m.a.ExceptionHandlerExceptionResolver - ControllerAdvice beans: 1 @ExceptionHandler, 1 ResponseBodyAdvice
+2024-10-10 23:42:41.625 INFO  o.s.b.d.a.OptionalLiveReloadServer - LiveReload server is running on port 35729
+2024-10-10 23:42:41.642 INFO  o.s.b.a.e.web.EndpointLinksResolver - Exposing 16 endpoints beneath base path '/actuator'
+2024-10-10 23:42:41.724 INFO  o.a.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8765"]
+2024-10-10 23:42:41.729 INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port 8765 (http) with context path '/'
+2024-10-10 23:42:41.730 INFO  o.s.s.quartz.SchedulerFactoryBean - Starting Quartz Scheduler now
+2024-10-10 23:42:41.745 INFO  o.s.s.quartz.LocalDataSourceJobStore - Freed 0 triggers from 'acquired' / 'blocked' state.
+2024-10-10 23:42:41.749 INFO  o.s.s.quartz.LocalDataSourceJobStore - Recovering 0 jobs that were in-progress at the time of the last shut-down.
+2024-10-10 23:42:41.749 INFO  o.s.s.quartz.LocalDataSourceJobStore - Recovery complete.
+2024-10-10 23:42:41.751 INFO  o.s.s.quartz.LocalDataSourceJobStore - Removed 0 'complete' triggers.
+2024-10-10 23:42:41.752 INFO  o.s.s.quartz.LocalDataSourceJobStore - Removed 0 stale fired job entries.
+2024-10-10 23:42:41.754 INFO  org.quartz.core.QuartzScheduler - Scheduler quartzScheduler_$_NON_CLUSTERED started.
+2024-10-10 23:42:41.773 INFO  c.g.q.QuartzSchedulersSpringBootApplication - Started QuartzSchedulersSpringBootApplication in 3.048 seconds (process running for 315.451)
+2024-10-10 23:42:41.777 INFO  o.s.b.d.a.ConditionEvaluationDeltaLoggingListener - Condition evaluation unchanged
+2024-10-10 23:47:31.909 INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2024-10-10 23:47:31.910 INFO  o.s.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+2024-10-10 23:47:31.910 DEBUG o.s.web.servlet.DispatcherServlet - Detected StandardServletMultipartResolver
+2024-10-10 23:47:31.910 DEBUG o.s.web.servlet.DispatcherServlet - Detected AcceptHeaderLocaleResolver
+2024-10-10 23:47:31.910 DEBUG o.s.web.servlet.DispatcherServlet - Detected FixedThemeResolver
+2024-10-10 23:47:31.915 DEBUG o.s.web.servlet.DispatcherServlet - Detected org.springframework.web.servlet.view.DefaultRequestToViewNameTranslator@69c54bbd
+2024-10-10 23:47:31.918 DEBUG o.s.web.servlet.DispatcherServlet - Detected org.springframework.web.servlet.support.SessionFlashMapManager@63e67b0
+2024-10-10 23:47:31.918 DEBUG o.s.web.servlet.DispatcherServlet - enableLoggingRequestDetails='false': request parameters and headers will be masked to prevent unsafe logging of potentially sensitive data
+2024-10-10 23:47:31.918 INFO  o.s.web.servlet.DispatcherServlet - Completed initialization in 8 ms
+2024-10-10 23:47:31.920 DEBUG o.s.web.servlet.DispatcherServlet - GET "/api/v1", parameters={}
+2024-10-10 23:47:31.924 DEBUG o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped to com.gowri.quartz.controller.EmailSchedulerController#test()
+2024-10-10 23:47:31.926 INFO  c.g.q.c.EmailSchedulerController - test API,,
+2024-10-10 23:47:31.927 DEBUG o.s.w.s.m.m.a.HttpEntityMethodProcessor - Using 'text/plain', given [*/*] and supported [text/plain, */*, application/json, application/*+json]
+2024-10-10 23:47:31.927 DEBUG o.s.w.s.m.m.a.HttpEntityMethodProcessor - Writing ["connected!,"]
+2024-10-10 23:47:31.930 DEBUG o.s.web.servlet.DispatcherServlet - Completed 200 OK
+2024-10-10 23:49:21.161 DEBUG o.s.web.servlet.DispatcherServlet - GET "/api/v1/email", parameters={}
+2024-10-10 23:49:21.166 WARN  o.s.w.s.m.s.DefaultHandlerExceptionResolver - Resolved [org.springframework.web.HttpRequestMethodNotSupportedException: Request method 'GET' is not supported]
+2024-10-10 23:49:21.166 DEBUG o.s.web.servlet.DispatcherServlet - Completed 405 METHOD_NOT_ALLOWED
+2024-10-10 23:49:21.167 DEBUG o.s.web.servlet.DispatcherServlet - "ERROR" dispatch for GET "/error", parameters={}
+2024-10-10 23:49:21.168 DEBUG o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped to org.springframework.boot.autoconfigure.web.servlet.error.BasicErrorController#error(HttpServletRequest)
+2024-10-10 23:49:21.172 DEBUG o.s.w.s.m.m.a.HttpEntityMethodProcessor - Using 'application/json', given [*/*] and supported [application/json, application/*+json]
+2024-10-10 23:49:21.173 DEBUG o.s.w.s.m.m.a.HttpEntityMethodProcessor - Writing [{timestamp=Thu Oct 10 23:49:21 IST 2024, status=405, error=Method Not Allowed, trace=org.springframe (truncated)...]
+2024-10-10 23:49:21.180 DEBUG o.s.web.servlet.DispatcherServlet - Exiting from "ERROR" dispatch, status 405
+2024-10-10 23:49:28.733 DEBUG o.s.web.servlet.DispatcherServlet - POST "/api/v1/email", parameters={}
+2024-10-10 23:49:28.734 DEBUG o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped to com.gowri.quartz.controller.EmailSchedulerController#scheduleEmail(EmailRequest)
+2024-10-10 23:49:28.805 DEBUG o.s.w.s.m.m.a.RequestResponseBodyMethodProcessor - Read "application/json;charset=UTF-8" to [EmailRequest [email=, subject=, body=, dateTime=null, timeZoneId=null]]
+2024-10-10 23:49:28.823 DEBUG o.s.web.servlet.DispatcherServlet - Failed to complete request: java.lang.NullPointerException: localDateTime
+2024-10-10 23:49:28.824 ERROR o.a.c.c.C.[.[.[.[dispatcherServlet] - Servlet.service() for servlet [dispatcherServlet] in context with path [] threw exception [Request processing failed: java.lang.NullPointerException: localDateTime] with root cause
+java.lang.NullPointerException: localDateTime
+	at java.base/java.util.Objects.requireNonNull(Objects.java:259)
+	at java.base/java.time.ZonedDateTime.ofLocal(ZonedDateTime.java:369)
+	at java.base/java.time.ZonedDateTime.of(ZonedDateTime.java:295)
+	at com.gowri.quartz.controller.EmailSchedulerController.scheduleEmail(EmailSchedulerController.java:56)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at org.springframework.web.method.support.InvocableHandlerMethod.doInvoke(InvocableHandlerMethod.java:255)
+	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:188)
+	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:118)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:926)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:831)
+	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:87)
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1089)
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:979)
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1014)
+	at org.springframework.web.servlet.FrameworkServlet.doPost(FrameworkServlet.java:914)
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:590)
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:885)
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:658)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:195)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140)
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:51)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140)
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140)
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140)
+	at org.springframework.web.filter.ServerHttpObservationFilter.doFilterInternal(ServerHttpObservationFilter.java:113)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140)
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:167)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:90)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:483)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:115)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:93)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:74)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:344)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:384)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:63)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:905)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1741)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:52)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1190)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:63)
+	at java.base/java.lang.Thread.run(Thread.java:1583)
+2024-10-10 23:49:28.828 DEBUG o.s.web.servlet.DispatcherServlet - "ERROR" dispatch for POST "/error", parameters={}
+2024-10-10 23:49:28.828 DEBUG o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped to org.springframework.boot.autoconfigure.web.servlet.error.BasicErrorController#error(HttpServletRequest)
+2024-10-10 23:49:28.829 DEBUG o.s.w.s.m.m.a.HttpEntityMethodProcessor - Using 'application/json', given [*/*] and supported [application/json, application/*+json]
+2024-10-10 23:49:28.830 DEBUG o.s.w.s.m.m.a.HttpEntityMethodProcessor - Writing [{timestamp=Thu Oct 10 23:49:28 IST 2024, status=500, error=Internal Server Error, trace=java.lang.Nu (truncated)...]
+2024-10-10 23:49:28.831 DEBUG o.s.web.servlet.DispatcherServlet - Exiting from "ERROR" dispatch, status 500
+2024-10-10 23:51:32.151 DEBUG o.s.web.servlet.DispatcherServlet - POST "/api/v1/email", parameters={}
+2024-10-10 23:51:32.152 DEBUG o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped to com.gowri.quartz.controller.EmailSchedulerController#scheduleEmail(EmailRequest)
+2024-10-10 23:51:32.163 DEBUG o.s.w.s.m.m.a.RequestResponseBodyMethodProcessor - Read "application/json;charset=UTF-8" to [EmailRequest [email=naveen.wodeyar@yahoo.com, subject=sp_quartz_test, body=Mail from Naveen through  (truncated)...]
+2024-10-10 23:51:32.175 DEBUG o.s.w.s.m.m.a.HttpEntityMethodProcessor - Using 'application/json', given [*/*] and supported [application/json, application/*+json]
+2024-10-10 23:51:32.181 DEBUG o.s.w.s.m.m.a.HttpEntityMethodProcessor - Writing [EmailResponse [success=false, jobId=null, jobGroup=null, message=dateTime must be in the future,]]
+2024-10-10 23:51:32.186 DEBUG o.s.web.servlet.DispatcherServlet - Completed 400 BAD_REQUEST
+2024-10-10 23:51:42.985 DEBUG o.s.web.servlet.DispatcherServlet - POST "/api/v1/email", parameters={}
+2024-10-10 23:51:42.986 DEBUG o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped to com.gowri.quartz.controller.EmailSchedulerController#scheduleEmail(EmailRequest)
+2024-10-10 23:51:42.987 DEBUG o.s.w.s.m.m.a.RequestResponseBodyMethodProcessor - Read "application/json;charset=UTF-8" to [EmailRequest [email=naveen.wodeyar@yahoo.com, subject=sp_quartz_test, body=Mail from Naveen through  (truncated)...]
+2024-10-10 23:51:43.142 DEBUG o.s.w.s.m.m.a.HttpEntityMethodProcessor - Using 'application/json', given [*/*] and supported [application/json, application/*+json]
+2024-10-10 23:51:43.143 DEBUG o.s.w.s.m.m.a.HttpEntityMethodProcessor - Writing [EmailResponse [success=true, jobId=c0d9ae21-3375-4995-857c-5a3bb72d2d83, jobGroup=email-jobs, messag (truncated)...]
+2024-10-10 23:51:43.144 DEBUG o.s.web.servlet.DispatcherServlet - Completed 500 INTERNAL_SERVER_ERROR
+2024-10-10 23:52:24.078 DEBUG o.s.web.servlet.DispatcherServlet - POST "/api/v1/email", parameters={}
+2024-10-10 23:52:24.080 DEBUG o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped to com.gowri.quartz.controller.EmailSchedulerController#scheduleEmail(EmailRequest)
+2024-10-10 23:52:24.083 DEBUG o.s.w.s.m.m.a.RequestResponseBodyMethodProcessor - Read "application/json;charset=UTF-8" to [EmailRequest [email=naveenkrishnawodeyar@gmail.com, subject=sp_quartz_test, body=Mail from Naveen th (truncated)...]
+2024-10-10 23:52:24.119 DEBUG o.s.w.s.m.m.a.HttpEntityMethodProcessor - Using 'application/json', given [*/*] and supported [application/json, application/*+json]
+2024-10-10 23:52:24.119 DEBUG o.s.w.s.m.m.a.HttpEntityMethodProcessor - Writing [EmailResponse [success=true, jobId=cb76140c-4977-4310-a3d1-f3c46db12749, jobGroup=email-jobs, messag (truncated)...]
+2024-10-10 23:52:24.121 DEBUG o.s.web.servlet.DispatcherServlet - Completed 500 INTERNAL_SERVER_ERROR
+2024-10-10 23:53:41.060 DEBUG o.s.web.servlet.DispatcherServlet - POST "/api/v1/email", parameters={}
+2024-10-10 23:53:41.060 DEBUG o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped to com.gowri.quartz.controller.EmailSchedulerController#scheduleEmail(EmailRequest)
+2024-10-10 23:53:41.062 DEBUG o.s.w.s.m.m.a.RequestResponseBodyMethodProcessor - Read "application/json;charset=UTF-8" to [EmailRequest [email=naveenkrishnawodeyar@gmail.com, subject=sp_quartz_test, body=Mail from Naveen th (truncated)...]
+2024-10-10 23:53:41.088 DEBUG o.s.w.s.m.m.a.HttpEntityMethodProcessor - Using 'application/json', given [*/*] and supported [application/json, application/*+json]
+2024-10-10 23:53:41.088 DEBUG o.s.w.s.m.m.a.HttpEntityMethodProcessor - Writing [EmailResponse [success=true, jobId=42549f2c-e36c-4129-a802-137351fe505d, jobGroup=email-jobs, messag (truncated)...]
+2024-10-10 23:53:41.089 DEBUG o.s.web.servlet.DispatcherServlet - Completed 500 INTERNAL_SERVER_ERROR
+2024-10-10 23:54:16.670 INFO  o.s.b.d.a.LocalDevToolsAutoConfiguration$RestartingClassPathChangeChangedEventListener - Restarting due to 1 class path change (0 additions, 0 deletions, 1 modification)
+2024-10-10 23:54:16.673 INFO  org.quartz.core.QuartzScheduler - Scheduler quartzScheduler_$_NON_CLUSTERED paused.
+2024-10-10 23:54:16.673 INFO  o.a.coyote.http11.Http11NioProtocol - Stopping ProtocolHandler ["http-nio-8765"]
+2024-10-10 23:54:16.725 INFO  o.s.s.quartz.SchedulerFactoryBean - Shutting down Quartz Scheduler
+2024-10-10 23:54:16.726 INFO  org.quartz.core.QuartzScheduler - Scheduler quartzScheduler_$_NON_CLUSTERED shutting down.
+2024-10-10 23:54:16.726 INFO  org.quartz.core.QuartzScheduler - Scheduler quartzScheduler_$_NON_CLUSTERED paused.
+2024-10-10 23:54:16.728 INFO  org.quartz.core.QuartzScheduler - Scheduler quartzScheduler_$_NON_CLUSTERED shutdown complete.
+2024-10-10 23:54:16.729 INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
+2024-10-10 23:54:16.734 INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-4 - Shutdown initiated...
+2024-10-10 23:54:16.798 INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-4 - Shutdown completed.
+2024-10-10 23:54:17.118 INFO  c.g.q.QuartzSchedulersSpringBootApplication - Starting QuartzSchedulersSpringBootApplication using Java 21.0.1 with PID 1228 (N:\Pro\Menses\2024\Oct\schedulers\quartzSchedulersSpringBoot\target\classes started by NaveenWodeyar in N:\Pro\Menses\2024\Oct\schedulers\quartzSchedulersSpringBoot)
+2024-10-10 23:54:17.118 INFO  c.g.q.QuartzSchedulersSpringBootApplication - The following 1 profile is active: "UAT"
+2024-10-10 23:54:17.942 INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2024-10-10 23:54:17.946 INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 4 ms. Found 0 JPA repository interfaces.
+2024-10-10 23:54:18.171 INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port 8765 (http)
+2024-10-10 23:54:18.173 INFO  o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8765"]
+2024-10-10 23:54:18.173 INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+2024-10-10 23:54:18.174 INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.30]
+2024-10-10 23:54:18.218 INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2024-10-10 23:54:18.218 INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 1087 ms
+2024-10-10 23:54:18.479 DEBUG o.s.w.f.ServerHttpObservationFilter - Filter 'webMvcObservationFilter' configured for use
+2024-10-10 23:54:18.578 INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-5 - Starting...
+2024-10-10 23:54:18.614 INFO  com.zaxxer.hikari.pool.HikariPool - HikariPool-5 - Added connection com.mysql.cj.jdbc.ConnectionImpl@15e5057c
+2024-10-10 23:54:18.614 INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-5 - Start completed.
+2024-10-10 23:54:18.690 INFO  o.s.o.j.p.SpringPersistenceUnitInfo - No LoadTimeWeaver setup: ignoring JPA class transformer
+2024-10-10 23:54:18.717 INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2024-10-10 23:54:18.859 INFO  org.quartz.impl.StdSchedulerFactory - Using default implementation for ThreadExecutor
+2024-10-10 23:54:18.864 INFO  o.quartz.core.SchedulerSignalerImpl - Initialized Scheduler Signaller of type: class org.quartz.core.SchedulerSignalerImpl
+2024-10-10 23:54:18.864 INFO  org.quartz.core.QuartzScheduler - Quartz Scheduler v.2.3.2 created.
+2024-10-10 23:54:18.865 INFO  o.s.s.quartz.LocalDataSourceJobStore - Using db table-based data access locking (synchronization).
+2024-10-10 23:54:18.865 INFO  o.s.s.quartz.LocalDataSourceJobStore - JobStoreCMT initialized.
+2024-10-10 23:54:18.866 INFO  org.quartz.core.QuartzScheduler - Scheduler meta-data: Quartz Scheduler (v2.3.2) 'quartzScheduler' with instanceId 'NON_CLUSTERED'
+  Scheduler class: 'org.quartz.core.QuartzScheduler' - running locally.
+  NOT STARTED.
+  Currently in standby mode.
+  Number of jobs executed: 0
+  Using thread pool 'org.quartz.simpl.SimpleThreadPool' - with 10 threads.
+  Using job-store 'org.springframework.scheduling.quartz.LocalDataSourceJobStore' - which supports persistence. and is not clustered.
+
+2024-10-10 23:54:18.867 INFO  org.quartz.impl.StdSchedulerFactory - Quartz scheduler 'quartzScheduler' initialized from an externally provided properties instance.
+2024-10-10 23:54:18.867 INFO  org.quartz.impl.StdSchedulerFactory - Quartz scheduler version: 2.3.2
+2024-10-10 23:54:18.867 INFO  org.quartz.core.QuartzScheduler - JobFactory set to: org.springframework.scheduling.quartz.SpringBeanJobFactory@3e83e796
+2024-10-10 23:54:19.108 WARN  o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2024-10-10 23:54:19.253 DEBUG o.s.w.s.m.m.a.RequestMappingHandlerMapping - 8 mappings in 'requestMappingHandlerMapping'
+2024-10-10 23:54:19.421 DEBUG o.s.w.s.h.SimpleUrlHandlerMapping - Patterns [/webjars/**, /**, /swagger-ui*/*swagger-initializer.js, /swagger-ui*/**] in 'resourceHandlerMapping'
+2024-10-10 23:54:19.502 DEBUG o.s.w.s.m.m.a.RequestMappingHandlerAdapter - ControllerAdvice beans: 0 @ModelAttribute, 0 @InitBinder, 1 RequestBodyAdvice, 1 ResponseBodyAdvice
+2024-10-10 23:54:19.532 DEBUG o.s.w.s.m.m.a.ExceptionHandlerExceptionResolver - ControllerAdvice beans: 1 @ExceptionHandler, 1 ResponseBodyAdvice
+2024-10-10 23:54:20.292 INFO  o.s.b.d.a.OptionalLiveReloadServer - LiveReload server is running on port 35729
+2024-10-10 23:54:20.301 INFO  o.s.b.a.e.web.EndpointLinksResolver - Exposing 16 endpoints beneath base path '/actuator'
+2024-10-10 23:54:20.372 INFO  o.a.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8765"]
+2024-10-10 23:54:20.378 INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port 8765 (http) with context path '/'
+2024-10-10 23:54:20.379 INFO  o.s.s.quartz.SchedulerFactoryBean - Starting Quartz Scheduler now
+2024-10-10 23:54:20.392 INFO  o.s.s.quartz.LocalDataSourceJobStore - Freed 0 triggers from 'acquired' / 'blocked' state.
+2024-10-10 23:54:20.398 INFO  o.s.s.quartz.LocalDataSourceJobStore - Recovering 0 jobs that were in-progress at the time of the last shut-down.
+2024-10-10 23:54:20.398 INFO  o.s.s.quartz.LocalDataSourceJobStore - Recovery complete.
+2024-10-10 23:54:20.401 INFO  o.s.s.quartz.LocalDataSourceJobStore - Removed 0 'complete' triggers.
+2024-10-10 23:54:20.402 INFO  o.s.s.quartz.LocalDataSourceJobStore - Removed 0 stale fired job entries.
+2024-10-10 23:54:20.404 INFO  org.quartz.core.QuartzScheduler - Scheduler quartzScheduler_$_NON_CLUSTERED started.
+2024-10-10 23:54:20.420 INFO  c.g.q.QuartzSchedulersSpringBootApplication - Started QuartzSchedulersSpringBootApplication in 3.459 seconds (process running for 1014.098)
+2024-10-10 23:54:20.424 INFO  o.s.b.d.a.ConditionEvaluationDeltaLoggingListener - Condition evaluation unchanged
+2024-10-10 23:59:12.801 INFO  o.s.b.a.SpringApplicationAdminMXBeanRegistrar$SpringApplicationAdmin - Application shutdown requested.
+2024-10-10 23:59:12.804 INFO  org.quartz.core.QuartzScheduler - Scheduler quartzScheduler_$_NON_CLUSTERED paused.
+2024-10-10 23:59:12.805 INFO  o.a.coyote.http11.Http11NioProtocol - Stopping ProtocolHandler ["http-nio-8765"]
+2024-10-10 23:59:12.827 INFO  o.s.s.quartz.SchedulerFactoryBean - Shutting down Quartz Scheduler
+2024-10-10 23:59:12.827 INFO  org.quartz.core.QuartzScheduler - Scheduler quartzScheduler_$_NON_CLUSTERED shutting down.
+2024-10-10 23:59:12.827 INFO  org.quartz.core.QuartzScheduler - Scheduler quartzScheduler_$_NON_CLUSTERED paused.
+2024-10-10 23:59:12.828 INFO  org.quartz.core.QuartzScheduler - Scheduler quartzScheduler_$_NON_CLUSTERED shutdown complete.
+2024-10-10 23:59:12.828 INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
+2024-10-10 23:59:12.831 INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-5 - Shutdown initiated...
+2024-10-10 23:59:12.864 INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-5 - Shutdown completed.

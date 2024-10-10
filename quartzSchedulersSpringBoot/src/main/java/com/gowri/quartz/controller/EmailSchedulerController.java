@@ -20,6 +20,7 @@ import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
+import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 import com.gowri.quartz.job.EmailJob;
@@ -33,7 +34,8 @@ import jakarta.validation.Valid;
  * @date 10-Oct-2024
  * @time 9:17:02 pm
  */
-@RestController("/api/v1")
+@RestController
+@RequestMapping("/api/v1")
 public class EmailSchedulerController {
 	
 	private static final Logger log = LoggerFactory.getLogger(EmailSchedulerController.class);
@@ -44,6 +46,7 @@ public class EmailSchedulerController {
 	
 	@GetMapping
 	public ResponseEntity<String> test(){
+		log.info("test API,,");
 		return  ResponseEntity.ok("connected!,");
 	}
 	
@@ -62,7 +65,7 @@ public class EmailSchedulerController {
 			scheduler.scheduleJob(jobDetail,jobTrigger);
 		
 			EmailResponse emailResponse = new EmailResponse(true,jobDetail.getKey().getName(),jobDetail.getKey().getGroup(),"Email sent successfully!,");
-			return ResponseEntity.status(HttpStatus.INTERNAL_SERVER_ERROR)
+			return ResponseEntity.status(HttpStatus.OK)
 					.body(emailResponse);
 	
 		} catch (SchedulerException e) {

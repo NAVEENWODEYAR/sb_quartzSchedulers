@@ -22,5 +22,6 @@ public class QuartzSchedulersSpringBootApplication {
         System.out.println("\n***********************");
         System.out.println("Active Profile: " + activeProfile);
         System.out.println("Properties File: " + propertySourceName + ".properties");
+        System.out.println("\n***********************");
     }
 }
