@@ -1,0 +1,26 @@
+package com.gowri.quartz.jobs;
+
+import org.quartz.Job;
+import org.quartz.JobExecutionContext;
+import org.quartz.JobExecutionException;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
+import org.springframework.stereotype.Component;
+
+/**
+ * @author NaveenWodeyar
+ * @date 11-Oct-2024
+ * @time 10:12:40 pm
+ */
+@Component
+public class FirstJob implements Job {
+	
+	private static final Logger log = LoggerFactory.getLogger(FirstJob.class);
+
+	@Override
+	public void execute(JobExecutionContext context) throws JobExecutionException {
+		log.info("dummy job executed");
+		System.out.println("Dummy Job!,");
+	}
+
+}
