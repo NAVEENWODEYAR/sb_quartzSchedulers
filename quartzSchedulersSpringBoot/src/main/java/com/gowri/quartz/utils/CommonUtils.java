@@ -53,7 +53,7 @@ public class CommonUtils {
 					triggerInfo.setTimeInterval(repeatValue);
 					triggerInfo.setInfo(information);
 					
-					return info;
+					return triggerInfo;
 					
 	}
 	

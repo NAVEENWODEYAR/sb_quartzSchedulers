@@ -1,5 +1,7 @@
 package com.gowri.quartz.jobs;
 
+import java.util.Date;
+
 import org.quartz.Job;
 import org.quartz.JobExecutionContext;
 import org.quartz.JobExecutionException;
@@ -21,6 +23,7 @@ public class FirstJob implements Job {
 	public void execute(JobExecutionContext context) throws JobExecutionException {
 		log.info("dummy job executed");
 		System.out.println("Dummy Job!,");
+        System.out.println("First Job in Qaurtz Scheduling...."+new Date(System.currentTimeMillis()));
 	}
 
 }
