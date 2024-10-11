@@ -45,7 +45,9 @@ build/
 .DS_Store
 Thumbs.db
 *.application.log
-/log/**
+./log/**
+.log/application.log
+*.log
 
 # Include META-INF resources
 !src/main/resources/META-INF/
