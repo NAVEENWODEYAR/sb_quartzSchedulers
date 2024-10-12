@@ -1,5 +1,6 @@
 package com.gowri.quartz.model;
 
+import java.io.Serializable;
 import java.util.Objects;
 
 /**
@@ -7,7 +8,9 @@ import java.util.Objects;
  * @date 11-Oct-2024
  * @time 10:21:42 pm
  */
-public class TriggerInfo {
+public class TriggerInfo implements Serializable{
+	
+    private static final long serialVersionUID = 1L;
 
 	private int triggerCount;
 	
