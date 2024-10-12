@@ -5,8 +5,8 @@
         <!-- Location of the main log file -->
         <file>log/application.log</file>
         <encoder>
-            <!-- Define the log message pattern including milliseconds -->
-            <pattern>%d{yyyy-MM-dd HH:mm:ss.SSS} %-5level %logger{36} - %msg%n</pattern>
+            <!-- Updated log message pattern -->
+            <pattern>%d{yyyy-MM-dd HH:mm:ss.SSS} [%level] [%logger{36}] - %msg%n</pattern>
         </encoder>
         <!-- Define rolling policy with time-based and size-based rolling -->
         <rollingPolicy class="ch.qos.logback.core.rolling.TimeBasedRollingPolicy">
@@ -20,27 +20,22 @@
         </triggeringPolicy>
     </appender>
 
+    <!-- Define a ConsoleAppender for console logging -->
+    <appender name="CONSOLE" class="ch.qos.logback.core.ConsoleAppender">
+        <encoder>
+            <!-- Updated log message pattern for console output -->
+            <pattern>%d{yyyy-MM-dd HH:mm:ss.SSS} [%level] [%logger{36}] - %msg%n</pattern>
+        </encoder>
+    </appender>
+
     <!-- Root logger configuration -->
     <root level="INFO">
-        <!-- Attach the FILE appender to the root logger -->
+        <!-- Attach both FILE and CONSOLE appenders to the root logger -->
         <appender-ref ref="FILE" />
+        <appender-ref ref="CONSOLE" />
     </root>
 
     <!-- Custom logger configurations -->
     <logger name="org.springframework.web" level="DEBUG"/>
     <logger name="org.hibernate" level="ERROR"/>
-
-    <!-- Optionally, add a ConsoleAppender for console logging -->
-    <appender name="CONSOLE" class="ch.qos.logback.core.ConsoleAppender">
-        <encoder>
-            <!-- Define the log message pattern for console output -->
-            <pattern>%d{yyyy-MM-dd HH:mm:ss.SSS} %-5level %logger{36} - %msg%n</pattern>
-        </encoder>
-    </appender>
-
-    <!-- Optionally, configure the root logger to log to the console as well -->
-    <root level="INFO">
-        <appender-ref ref="FILE" />
-        <appender-ref ref="CONSOLE" />
-    </root>
 </configuration>
