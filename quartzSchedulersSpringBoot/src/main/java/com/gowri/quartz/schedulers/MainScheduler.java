@@ -1,9 +1,11 @@
 package com.gowri.quartz.schedulers;
 
+import org.quartz.CronScheduleBuilder;
 import org.quartz.JobDetail;
 import org.quartz.Scheduler;
 import org.quartz.SchedulerException;
 import org.quartz.Trigger;
+import org.quartz.TriggerBuilder;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -61,4 +63,15 @@ public class MainScheduler {
 			throw new RuntimeException(e);
 		}
 	}
+	
+	public void scheduleJob(Class className, String cronExpression) {
+		try {
+			JobDetail jobDetail = commonUtils.getJobDetailCron(className);
+			Trigger trigerInfoOfJob = commonUtils.getTriggerByCronExpression(className, cronExpression);
+			scheduler.scheduleJob(jobDetail,trigerInfoOfJob);
+		} catch (SchedulerException e) {
+			throw new RuntimeException(e);
+		}
+	}
+
 }

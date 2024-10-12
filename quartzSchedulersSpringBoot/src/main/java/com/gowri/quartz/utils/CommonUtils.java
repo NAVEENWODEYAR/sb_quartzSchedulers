@@ -2,6 +2,7 @@ package com.gowri.quartz.utils;
 
 import java.util.Date;
 
+import org.quartz.CronScheduleBuilder;
 import org.quartz.JobBuilder;
 import org.quartz.JobDataMap;
 import org.quartz.JobDetail;
@@ -29,6 +30,12 @@ public class CommonUtils {
 				.build();
 	}
 	
+	public JobDetail getJobDetailCron(Class className) {
+		return JobBuilder.newJob(className)
+				.withIdentity(className.getSimpleName(),"group-1")
+				.build();
+	}
+	
 	public Trigger getTrigerInfoOfJob(Class className, TriggerInfo triggerInfo) {
 		SimpleScheduleBuilder scheduleBuilder = SimpleScheduleBuilder.simpleSchedule()
 				.withIntervalInMilliseconds(triggerInfo.getTimeInterval());
@@ -45,6 +52,14 @@ public class CommonUtils {
 				.build();
 	}
 	
+	public Trigger getTriggerByCronExpression(Class className, String cronExp) {
+		return TriggerBuilder
+				.newTrigger()
+				.withIdentity(className.getSimpleName())
+				.withSchedule(CronScheduleBuilder.cronSchedule(cronExp))
+				.build();
+	}
+	
 	public TriggerInfo getTriggerInfo(int triggerCount, boolean runForEver, Long repeatValue, Long initialOffset, String information) {
 		TriggerInfo triggerInfo = new TriggerInfo();
 					triggerInfo.setRunForEver(runForEver);
@@ -56,6 +71,4 @@ public class CommonUtils {
 					return triggerInfo;
 					
 	}
-	
-	
 }

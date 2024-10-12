@@ -25,9 +25,16 @@ public class SchedulerForEverJob {
 		this.commonUtils = commonUtils;
 	}
 	
+	/**
 	@PostConstruct
 	public void init() {
 		TriggerInfo triggerInfo = commonUtils.getTriggerInfo(1, true, 5000L, 5000L, "Hello World,");
 		mainScheduler.scheduleJob(SecondJob.class, triggerInfo);
+	}
+	*/
+	
+	@PostConstruct
+	public void init() {
+		mainScheduler.scheduleJob(SecondJob.class, "0/2 * * * * ?");
 	}
 }
