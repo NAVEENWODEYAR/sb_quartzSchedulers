@@ -18,6 +18,7 @@ import jakarta.annotation.PostConstruct;
 public class SchedulerForEverJob {
 
 	private final MainScheduler mainScheduler;
+	
 	private final CommonUtils commonUtils;
 	
 	public SchedulerForEverJob(MainScheduler mainScheduler, CommonUtils commonUtils) {
@@ -33,8 +34,9 @@ public class SchedulerForEverJob {
 	}
 	*/
 	
+	// job scheduled based on cron expression,
 	@PostConstruct
 	public void init() {
-		mainScheduler.scheduleJob(SecondJob.class, "0/2 * * * * ?");
+		mainScheduler.scheduleJob(SecondJob.class, "0/1 * * * * ?");
 	}
 }
