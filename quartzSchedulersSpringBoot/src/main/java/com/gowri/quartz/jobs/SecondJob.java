@@ -3,32 +3,36 @@ package com.gowri.quartz.jobs;
 import java.text.SimpleDateFormat;
 import java.util.Date;
 
-import org.quartz.Job;
-import org.quartz.JobExecutionContext;
-import org.quartz.JobExecutionException;
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
+import org.quartz.*;
+import org.slf4j.*;
 
 /**
  * @author NaveenWodeyar
  * @date 12-Oct-2024
- * @time 7:03:30 pm
+ * @time 7:03:30 pm
  */
 public class SecondJob implements Job {
 
-	private static final Logger log = LoggerFactory.getLogger(SecondJob.class);
-	@Override
-	public void execute(JobExecutionContext context) throws JobExecutionException {
+    private static final Logger log = LoggerFactory.getLogger(SecondJob.class);
+    private static int jobCount = 1; 
+
+    @Override
+    public void execute(JobExecutionContext context) throws JobExecutionException {
         long startTime = System.currentTimeMillis();
         SimpleDateFormat sdf = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss");
+
+        // Increment job count
+        jobCount++;
+
         System.out.println("############################");
+        System.out.println("Job count: "+jobCount);
         log.info("\n********** Started ************\n");
+        log.info("Job Count: {}", jobCount);
         log.info("Start Time: {}", sdf.format(new Date(startTime)));
 
         try {
-        	log.info("executing job");
-            System.out.println("SECOND JOB");
-
+            log.info("Executing job");
+            System.out.println("SECOND JOB - Execution #" + jobCount);
         } catch (Exception e) {
             log.error("Error executing SecondJob", e);
             throw new JobExecutionException(e);
@@ -44,5 +48,4 @@ public class SecondJob implements Job {
             System.out.println("############################");
         }
     }
-
 }
