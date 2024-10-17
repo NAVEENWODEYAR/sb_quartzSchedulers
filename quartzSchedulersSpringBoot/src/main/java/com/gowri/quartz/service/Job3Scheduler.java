@@ -2,6 +2,7 @@ package com.gowri.quartz.service;
 
 import org.springframework.stereotype.Service;
 
+import com.gowri.quartz.jobs.Job3;
 import com.gowri.quartz.jobs.SecondJob;
 import com.gowri.quartz.model.TriggerInfo;
 import com.gowri.quartz.schedulers.MainScheduler;
@@ -15,28 +16,22 @@ import jakarta.annotation.PostConstruct;
  * @time 7:06:16 pm
  */
 @Service
-public class SchedulerForEverJob {
+public class Job3Scheduler {
 
 	private final MainScheduler mainScheduler;
 	
 	private final CommonUtils commonUtils;
 	
-	public SchedulerForEverJob(MainScheduler mainScheduler, CommonUtils commonUtils) {
+	public Job3Scheduler(MainScheduler mainScheduler, CommonUtils commonUtils) {
 		this.mainScheduler = mainScheduler;
 		this.commonUtils = commonUtils;
 	}
 	
 	
-//	@PostConstruct
-//	public void init() {
-//		TriggerInfo triggerInfo = commonUtils.getTriggerInfo(1, true, 5000L, 5000L, "Hello World,");
-//		mainScheduler.scheduleJob(SecondJob.class, triggerInfo);
-//	}
-	
-	
-	// job scheduled based on cron expression,
 	@PostConstruct
 	public void init() {
-		mainScheduler.scheduleJob(SecondJob.class, "0/1 * * * * ?");
+		TriggerInfo triggerInfo = commonUtils.getTriggerInfo(1, true, 5000L, 5000L, "JOB-3,");
+		mainScheduler.scheduleJob(Job3.class, triggerInfo);
 	}
+	
 }

@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<configuration>
+    <!-- Define a FileAppender to write log messages to a file -->
+    <appender name="FILE" class="ch.qos.logback.core.FileAppender">
+        <!-- Location of the main log file -->
+        <file>log/application.log</file>
+        <encoder>
+            <!-- Log message pattern for production -->
+            <pattern>%d{yyyy-MM-dd HH:mm:ss} [%level] [%logger{36}] - %msg%n</pattern>
+        </encoder>
+        <!-- Define rolling policy with time-based and size-based rolling -->
+        <rollingPolicy class="ch.qos.logback.core.rolling.TimeBasedRollingPolicy">
+            <!-- Pattern for rolling files, including timestamp -->
+            <fileNamePattern>log/application-%d{yyyy-MM-dd}.%i.log</fileNamePattern>
+            <maxHistory>30</maxHistory> <!-- Keep logs for 30 days -->
+            <totalSizeCap>500MB</totalSizeCap> <!-- Total size of log files should be below 500MB -->
+        </rollingPolicy>
+        <triggeringPolicy class="ch.qos.logback.core.rolling.SizeBasedTriggeringPolicy">
+            <maxFileSize>10MB</maxFileSize> <!-- Maximum file size for each log file -->
+        </triggeringPolicy>
+    </appender>
+
+    <!-- Define a ConsoleAppender for console logging -->
+    <appender name="CONSOLE" class="ch.qos.logback.core.ConsoleAppender">
+        <encoder>
+            <!-- Simpler log message pattern for console output -->
+            <pattern>%d{yyyy-MM-dd HH:mm:ss} [%level] - %msg%n</pattern>
+        </encoder>
+    </appender>
+
+    <!-- Root logger configuration -->
+    <root level="WARN"> <!-- Set to WARN for production -->
+        <!-- Attach both FILE and CONSOLE appenders to the root logger -->
+        <appender-ref ref="FILE" />
+        <appender-ref ref="CONSOLE" />
+    </root>
+
+    <!-- Custom logger configurations -->
+    <logger name="org.springframework.web" level="INFO"/> <!-- Adjusted to INFO for production -->
+    <logger name="org.hibernate" level="ERROR"/>
+</configuration>
