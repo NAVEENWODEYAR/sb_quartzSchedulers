@@ -1,7 +1,7 @@
 package com.gowri.quartz.utils;
 
-import java.util.Date;
-
+import java.uExpression;
+import.java.util.*;
 import org.quartz.*;
 import org.springframework.stereotype.Service;
 
@@ -15,6 +15,7 @@ import com.gowri.quartz.model.TriggerInfo;
 @Service
 public class CommonUtils {
 
+private static final Logger log = LoggerFactory.getLogger(CommonUtils.class);
 	public JobDetail getJobDetail(Class className, TriggerInfo triggerInfo) {
 		JobDataMap jobDataMap = new JobDataMap();
 		jobDataMap.put(className.getSimpleName(), triggerInfo);
@@ -25,6 +26,8 @@ public class CommonUtils {
 	}
 	
 	public JobDetail getJobDetailCron(Class className) {
+
+log.info("Scheduling job using Cron Expression");
 		return JobBuilder.newJob(className)
 				.withIdentity(className.getSimpleName(),"group-1")
 				.build();
