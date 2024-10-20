@@ -2,6 +2,7 @@ package com.gowri.quartz.model;
 
 import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
+import jakarta.persistence.Id;
 
 /**
  * @author NaveenWodeyar
@@ -10,6 +11,9 @@ import jakarta.persistence.Entity;
  */
 @Entity
 public class TestEntity extends AuditableEntity {
+	
+		@Id
+		private Integer tId;
 
 	 	@Column(name = "name")
 	    private String name;
