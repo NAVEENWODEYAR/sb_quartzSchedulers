@@ -1,8 +1,8 @@
 package com.gowri.quartz.utils;
 
-import java.uExpression;
-import.java.util.*;
+import java.util.*;
 import org.quartz.*;
+import org.slf4j.*;
 import org.springframework.stereotype.Service;
 
 import com.gowri.quartz.model.TriggerInfo;
@@ -15,7 +15,8 @@ import com.gowri.quartz.model.TriggerInfo;
 @Service
 public class CommonUtils {
 
-private static final Logger log = LoggerFactory.getLogger(CommonUtils.class);
+	private static final Logger log = LoggerFactory.getLogger(CommonUtils.class);
+	
 	public JobDetail getJobDetail(Class className, TriggerInfo triggerInfo) {
 		JobDataMap jobDataMap = new JobDataMap();
 		jobDataMap.put(className.getSimpleName(), triggerInfo);
