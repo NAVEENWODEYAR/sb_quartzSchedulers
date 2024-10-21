@@ -38,7 +38,7 @@ public class SecondJob implements Job {
             throw new JobExecutionException(e);
         } finally {
             long endTime = System.currentTimeMillis();
-            long duration = endTime - startTime;
+            long duration = endTime - startTime/1000;
 
             log.info("End Time: {}", sdf.format(new Date(endTime)));
             log.info("Total Duration: {} ms", duration);
