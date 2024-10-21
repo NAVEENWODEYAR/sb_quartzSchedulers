@@ -35,7 +35,7 @@ public class Job3Scheduler {
 	public void init() {
 		TriggerInfo triggerInfo = commonUtils.getTriggerInfo(1, true, 5000L, 5000L, "JOB-3,");
 		mainScheduler.scheduleJob(Job3.class, triggerInfo);
-		log.info("scheduling the job,");
+		log.info("scheduling the job using Trigger_Info");
 	}
 	
 }

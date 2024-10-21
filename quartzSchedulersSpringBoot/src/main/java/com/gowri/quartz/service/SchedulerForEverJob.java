@@ -31,12 +31,12 @@ public class SchedulerForEverJob {
 	}
 	
 	
-//	@PostConstruct
-//	public void init() {
-//		TriggerInfo triggerInfo = commonUtils.getTriggerInfo(1, true, 5000L, 5000L, "Hello World,");
-//		mainScheduler.scheduleJob(SecondJob.class, triggerInfo);
-//	}
-	
+	/*@PostConstruct
+	public void init() {
+		TriggerInfo triggerInfo = commonUtils.getTriggerInfo(1, true, 5000L, 5000L, "Hello World,");
+		mainScheduler.scheduleJob(SecondJob.class, triggerInfo);
+	}
+	*/
 	
 	// job scheduled based on cron expression,
 	@PostConstruct

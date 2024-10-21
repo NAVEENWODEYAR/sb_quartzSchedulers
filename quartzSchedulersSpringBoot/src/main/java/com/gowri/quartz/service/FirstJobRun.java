@@ -31,7 +31,8 @@ public class FirstJobRun {
         try {
             TriggerInfo triggerInfo = commonUtils.getTriggerInfo(5, false, 1000L, 1000L, "info");
             mainScheduler.scheduleJob(FirstJob.class, triggerInfo); 
-        } catch (Exception e) {
+            log.info("Job scheduled,");
+            } catch (Exception e) {
             e.printStackTrace();
         }
     }
