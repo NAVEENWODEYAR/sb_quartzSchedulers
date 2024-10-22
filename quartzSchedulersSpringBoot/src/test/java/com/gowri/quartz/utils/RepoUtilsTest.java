@@ -34,7 +34,7 @@ class RepoUtilsTest {
     @BeforeEach
     void setUp() {
         MockitoAnnotations.openMocks(this);
-        dairy = new TestEntity(); // Initialize your Dairy object with test data
+        dairy = new TestEntity(); 
     }
 
     @Test

@@ -18,6 +18,7 @@ import java.util.Optional;
 public class RepoUtils<T, ID> {
 
     private static final Logger log = LoggerFactory.getLogger(RepoUtils.class);
+    
     private final JpaRepository<T, ID> repository;
 
     @Autowired
@@ -31,9 +32,9 @@ public class RepoUtils<T, ID> {
             T savedEntity = repository.save(entity);
             logDuration("save", start);
             return savedEntity;
-        } catch (Exception e) {
-            log.error("Error occurred while saving entity: {}", e.getMessage());
-            throw e; // Rethrow or handle as needed
+        } catch (Exception ex) {
+            log.error("Error occurred while saving entity: {}", ex.getMessage());
+            throw ex; 
         }
     }
 
