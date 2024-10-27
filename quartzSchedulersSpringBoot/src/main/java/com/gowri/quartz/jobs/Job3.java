@@ -38,7 +38,7 @@ public class Job3 implements Job {
 	        System.out.println("Dummy Job ended at: " + end);
 
 	        // Calculate and log duration
-	        long durationInSeconds = Duration.between(start, end).toSeconds();
+	        long durationInSeconds = Duration.between(start, end).toSeconds()/1000;
 	        log.info("Total Duration: {} seconds", durationInSeconds);
 	        System.out.println("Total Duration: " + durationInSeconds + " seconds");
 	    }
