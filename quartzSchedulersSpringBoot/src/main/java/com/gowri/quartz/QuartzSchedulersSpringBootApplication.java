@@ -16,7 +16,6 @@ import java.util.Date;
 @EnableScheduling 
 public class QuartzSchedulersSpringBootApplication {
 
-    // Logger for logging application events
     private static final Logger log = LoggerFactory.getLogger(QuartzSchedulersSpringBootApplication.class);
 
     // Date format for logging timestamps
