@@ -36,8 +36,6 @@ build/
 
 # Compiled Files
 *.class
-*.txt
-*.properties
 
 # Logs and temporary files
 *.log
