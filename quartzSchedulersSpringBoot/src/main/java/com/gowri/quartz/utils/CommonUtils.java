@@ -18,6 +18,7 @@ public class CommonUtils {
 	private static final Logger log = LoggerFactory.getLogger(CommonUtils.class);
 	
 	public JobDetail getJobDetail(Class className, TriggerInfo triggerInfo) {
+		log.info("Job Detail::");
 		JobDataMap jobDataMap = new JobDataMap();
 		jobDataMap.put(className.getSimpleName(), triggerInfo);
 		return JobBuilder.newJob(className)
@@ -27,14 +28,14 @@ public class CommonUtils {
 	}
 	
 	public JobDetail getJobDetailCron(Class className) {
-
-log.info("Scheduling job using Cron Expression");
+		log.info("Scheduling job using Cron Expression");
 		return JobBuilder.newJob(className)
 				.withIdentity(className.getSimpleName(),"group-1")
 				.build();
 	}
 	
 	public Trigger getTrigerInfoOfJob(Class className, TriggerInfo triggerInfo) {
+		log.info("Trigger Info::{}",triggerInfo);
 		SimpleScheduleBuilder scheduleBuilder = SimpleScheduleBuilder.simpleSchedule()
 				.withIntervalInMilliseconds(triggerInfo.getTimeInterval());
 		
@@ -51,6 +52,7 @@ log.info("Scheduling job using Cron Expression");
 	}
 	
 	public Trigger getTriggerByCronExpression(Class className, String cronExp) {
+		log.info("Cron Info");
 		return TriggerBuilder
 				.newTrigger()
 				.withIdentity(className.getSimpleName())

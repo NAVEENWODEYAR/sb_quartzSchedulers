@@ -27,6 +27,7 @@ public class RepoUtils<T, ID> {
     }
 
     public T save(T entity) {
+    	log.info("Save to db:");
         Instant start = Instant.now();
         try {
             T savedEntity = repository.save(entity);
@@ -46,7 +47,7 @@ public class RepoUtils<T, ID> {
             return result;
         } catch (Exception e) {
             log.error("Error occurred while finding entity by ID {}: {}", id, e.getMessage());
-            throw e; // Rethrow or handle as needed
+            throw e; 
         }
     }
 
@@ -58,7 +59,7 @@ public class RepoUtils<T, ID> {
             return result;
         } catch (Exception e) {
             log.error("Error occurred while finding all entities: {}", e.getMessage());
-            throw e; // Rethrow or handle as needed
+            throw e;
         }
     }
 
@@ -67,10 +68,10 @@ public class RepoUtils<T, ID> {
         try {
             T updatedEntity = repository.save(entity);
             logDuration("update", start);
-            return updatedEntity; // save() method can also be used for updates
+            return updatedEntity;
         } catch (Exception e) {
             log.error("Error occurred while updating entity: {}", e.getMessage());
-            throw e; // Rethrow or handle as needed
+            throw e; 
         }
     }
 
@@ -81,7 +82,7 @@ public class RepoUtils<T, ID> {
             logDuration("deleteById", start);
         } catch (Exception e) {
             log.error("Error occurred while deleting entity by ID {}: {}", id, e.getMessage());
-            throw e; // Rethrow or handle as needed
+            throw e; 
         }
     }
 
