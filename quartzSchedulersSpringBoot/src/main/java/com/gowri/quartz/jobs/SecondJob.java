@@ -28,7 +28,7 @@ public class SecondJob implements Job {
         System.out.println("Job count: "+jobCount);
         log.info("\n********** Started ************\n");
         log.info("Job Count: {}", jobCount);
-        log.info("Start Time: {}", sdf.format(new Date(startTime)));
+        log.info("Second Job Start Time: {}", sdf.format(new Date(startTime)));
 
         try {
             log.info("Executing job");

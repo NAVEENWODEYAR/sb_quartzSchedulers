@@ -1,12 +1,8 @@
 package com.gowri.quartz.jobs;
 
-import java.time.Instant;
-import java.time.Duration;
-import org.quartz.Job;
-import org.quartz.JobExecutionContext;
-import org.quartz.JobExecutionException;
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
+import java.time.*;
+import org.quartz.*;
+import org.slf4j.*;
 import org.springframework.stereotype.Component;
 
 /**
@@ -15,9 +11,9 @@ import org.springframework.stereotype.Component;
  * @time 10:12:40 pm
  */
 @Component
-public class Job3 implements Job {
+public class ThirdJob implements Job {
 	
-	private static final Logger log = LoggerFactory.getLogger(Job3.class);
+	private static final Logger log = LoggerFactory.getLogger(ThirdJob.class);
 
 	@Override
 	public void execute(JobExecutionContext context) throws JobExecutionException {
