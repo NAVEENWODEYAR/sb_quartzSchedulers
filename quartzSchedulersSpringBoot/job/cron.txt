@@ -1,0 +1,35 @@
+Cron Expression	Description
+* * * * * *	Every second
+0 * * * * *	At the top of every minute
+0 0 * * * *	At the top of every hour
+0 0 0 * * *	Every day at midnight (12:00 AM)
+0 0 6 * * *	Every day at 6:00 AM
+0 0 10 ? * SUN	Every Sunday at 10:00 AM
+0 0 0 1 * ?	On the 1st day of every month at midnight
+0 */15 * * * *	Every 15 minutes
+0 */30 * * * *	Every 30 minutes
+0 0 8 ? * MON	Every Monday at 8:00 AM
+0 30 9 1 * ?	On the 1st of every month at 9:30 AM
+0 0 17 * * MON-FRI	Every weekday at 5:00 PM (Monday to Friday)
+0 0 0 1 1 ?	Every year on January 1st at midnight
+*/5 * * * * *	Every 5 seconds
+*/10 * * * * *	Every 10 seconds
+0 0 */2 * * *	Every 2 hours (e.g., 2:00, 4:00, 6:00, etc.)
+15 * * * * *	Every hour at the 15th minute (e.g., 1:15, 2:15, etc.)
+0 15 15 * * *	Every day at 3:15 PM
+0 0 12 * * ?	Every day at noon (12:00 PM)
+0 0 0 L * ?	On the last day of every month at midnight
+0 30 2 5 * ?	On the 5th day of every month at 2:30 AM
+0 */5 9-17 * * *	Every 5 minutes between 9 AM and 5 PM
+
+
+Explanation of Syntax Components:
+*: Matches every possible value for that field (wildcard).
+*/N: Matches every N units (e.g., */15 means every 15 units).
+0-59: Specifies a range of values (e.g., 5 means the 5th minute).
+1-31: Day of the month range (e.g., 1-31 means the task will run on any day from 1st to 31st).
+1-12: Month range (e.g., 1 means January, 12 means December).
+MON-SUN: Day of the week (e.g., MON for Monday).
+?: No specific value (used when you specify a value in another field to avoid conflicts).
+L: Last day of the month or the week (e.g., L for the last day of the month).
+W: Day of the week closest to a given day of the month (not commonly used in Spring's @Scheduled).

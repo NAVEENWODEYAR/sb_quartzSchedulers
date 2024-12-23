@@ -2,7 +2,6 @@ package com.gowri.quartz.jobs;
 
 import java.text.SimpleDateFormat;
 import java.util.Date;
-
 import org.quartz.*;
 import org.slf4j.*;
 
@@ -21,7 +20,6 @@ public class SecondJob implements Job {
         long startTime = System.currentTimeMillis();
         SimpleDateFormat sdf = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss");
 
-        // Increment job count
         jobCount++;
 
         System.out.println("############################");

@@ -1,8 +1,6 @@
 package com.gowri.quartz.model;
 
-import jakarta.persistence.Column;
-import jakarta.persistence.Entity;
-import jakarta.persistence.Id;
+import jakarta.persistence.*;
 
 /**
  * @author NaveenWodeyar
@@ -13,19 +11,18 @@ import jakarta.persistence.Id;
 public class TestEntity extends AuditableEntity {
 	
 		@Id
+	 	@Column(name = "TID")
 		private Integer tId;
 
-	 	@Column(name = "name")
+	 	@Column(name = "NAME")
 	    private String name;
 
-	    @Column(name = "age")
+	    @Column(name = "AGE")
 	    private int age;
 
-	    // Constructor
 	    public TestEntity() {
 	    }
 
-	    // Getters and Setters
 	    public String getName() {
 	        return name;
 	    }

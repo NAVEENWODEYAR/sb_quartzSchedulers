@@ -18,10 +18,10 @@ public class FirstJob implements Job {
 
 	@Override
 	public void execute(JobExecutionContext context) throws JobExecutionException {
-		log.info("dummy job started "+LocalDate.now());
-		System.out.println("Dummy Job!,");
+		log.info("First job started "+LocalDate.now());
+		System.out.println("First Job!,");
         System.out.println("First Job in Qaurtz Scheduling...."+new Date(System.currentTimeMillis()));
-		log.info("dummy job executed  "+LocalDate.now());
+		log.info("First job executed  "+LocalDate.now());
 	}
 
 }

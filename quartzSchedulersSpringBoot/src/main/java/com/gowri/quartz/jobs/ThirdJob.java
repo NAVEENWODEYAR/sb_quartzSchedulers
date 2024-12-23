@@ -21,7 +21,6 @@ public class ThirdJob implements Job {
 	    log.info("Dummy job started at: {}", start); 
 	    System.out.println("Dummy Job started at: " + start);
 	    
-	    // Job execution logic
 	    try {
 	        log.info("Dummy job executed"); 
 	        System.out.println("Dummy Job! First Job in Quartz Scheduling...." + start);
@@ -33,7 +32,6 @@ public class ThirdJob implements Job {
 	        log.info("Dummy job ended at: {}", end);
 	        System.out.println("Dummy Job ended at: " + end);
 
-	        // Calculate and log duration
 	        long durationInSeconds = Duration.between(start, end).toSeconds()/1000;
 	        log.info("Total Duration: {} seconds", durationInSeconds);
 	        System.out.println("Total Duration: " + durationInSeconds + " seconds");
