@@ -1,11 +1,15 @@
 package com.gowri.quartz;
 
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.context.ApplicationContext;
 import org.springframework.core.env.Environment;
 import org.springframework.scheduling.annotation.EnableScheduling;
 import org.springframework.scheduling.annotation.Scheduled;
+
+import com.gowri.quartz.controller.TestController;
+
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
@@ -21,6 +25,9 @@ public class QuartzSchedulersSpringBootApplication {
     private static final SimpleDateFormat dateFormat = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss");
     
     private static Date startTime;
+    
+    @Autowired
+    private TestController testController;
 
     public static void main(String[] args) {
         ApplicationContext context = SpringApplication.run(QuartzSchedulersSpringBootApplication.class, args);
@@ -53,5 +60,11 @@ public class QuartzSchedulersSpringBootApplication {
     @Scheduled(fixedRate = 1000)
     public void logApplicationStatus() {
         log.info("Application is running. Current time: {}", dateFormat.format(new Date()));
+    }
+    
+    @Scheduled(cron = "0 0/5 * * * *")  
+    public void executeTestEndPointEveryFiveMinutes() {
+        log.info("Executing testEndPoint method...");
+        testController.testEndPoint();  
     }
 }
