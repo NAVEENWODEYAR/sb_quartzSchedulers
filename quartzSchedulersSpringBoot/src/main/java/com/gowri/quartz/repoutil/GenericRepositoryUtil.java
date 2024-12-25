@@ -2,7 +2,6 @@ package com.gowri.quartz.repoutil;
 
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Component;
-
 import java.util.Optional;
 
 /**
@@ -27,7 +26,7 @@ public class GenericRepositoryUtil<T, ID> {
 
     // Update an existing entity
     public T update(T entity) {
-        return repository.save(entity); // save() also works for updates
+        return repository.save(entity); 
     }
 
     // Delete an entity by ID

@@ -21,7 +21,6 @@ public class RepoUtils<T, ID> {
     
     private final JpaRepository<T, ID> repository;
 
-    @Autowired
     public RepoUtils(JpaRepository<T, ID> repository) {
         this.repository = repository;
     }

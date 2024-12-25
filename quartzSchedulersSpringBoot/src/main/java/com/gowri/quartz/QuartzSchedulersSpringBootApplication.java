@@ -30,6 +30,7 @@ public class QuartzSchedulersSpringBootApplication {
     private TestController testController;
 
     public static void main(String[] args) {
+    	
         ApplicationContext context = SpringApplication.run(QuartzSchedulersSpringBootApplication.class, args);
         
         Environment env = context.getEnvironment();

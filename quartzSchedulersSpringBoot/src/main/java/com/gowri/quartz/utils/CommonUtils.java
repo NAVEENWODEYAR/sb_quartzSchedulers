@@ -4,7 +4,6 @@ import java.util.*;
 import org.quartz.*;
 import org.slf4j.*;
 import org.springframework.stereotype.Service;
-
 import com.gowri.quartz.model.TriggerInfo;
 
 /**
