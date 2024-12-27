@@ -1,5 +1,10 @@
 package com.gowri.quartz;
 
+import java.text.SimpleDateFormat;
+import java.util.Date;
+
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
@@ -10,20 +15,12 @@ import org.springframework.scheduling.annotation.Scheduled;
 
 import com.gowri.quartz.controller.TestController;
 
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
-
-import java.text.SimpleDateFormat;
-import java.util.Date;
-
 @SpringBootApplication
 @EnableScheduling 
 public class QuartzSchedulersSpringBootApplication {
 
     private static final Logger log = LoggerFactory.getLogger(QuartzSchedulersSpringBootApplication.class);
-
     private static final SimpleDateFormat dateFormat = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss");
-    
     private static Date startTime;
     
     @Autowired
@@ -32,15 +29,11 @@ public class QuartzSchedulersSpringBootApplication {
     public static void main(String[] args) {
     	
         ApplicationContext context = SpringApplication.run(QuartzSchedulersSpringBootApplication.class, args);
-        
         Environment env = context.getEnvironment();
-
         String activeProfile = getActiveProfile(env);
-        
         String propertySourceName = env.getProperty("spring.config.name", "application");
         
         startTime = new Date();
-
         logStartupInfo(activeProfile, propertySourceName);
     }
 
@@ -68,4 +61,5 @@ public class QuartzSchedulersSpringBootApplication {
         log.info("Executing testEndPoint method...");
         testController.testEndPoint();  
     }
+    
 }

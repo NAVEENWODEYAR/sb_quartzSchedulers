@@ -1,6 +1,7 @@
 package com.gowri.quartz.controller;
 
 import java.time.LocalDateTime;
+import java.time.format.DateTimeFormatter;
 import org.slf4j.*;
 import org.springframework.web.bind.annotation.*;
 
@@ -17,7 +18,8 @@ public class TestController {
 	
 	@GetMapping
 	public String testEndPoint() {
-		log.info("Time: {}",LocalDateTime.now());
+		log.info("Accessing EndPoint using CRON:: {}",
+				LocalDateTime.now().format(DateTimeFormatter.ofPattern("dd MMM yyyy hh:mm a")));
 		return "SERVICE::UP";
 	}
 

@@ -66,8 +66,6 @@ public class CommonUtils {
 					triggerInfo.setInitialOffSet(initialOffset);
 					triggerInfo.setTimeInterval(repeatValue);
 					triggerInfo.setInfo(information);
-					
 					return triggerInfo;
-					
 	}
 }
