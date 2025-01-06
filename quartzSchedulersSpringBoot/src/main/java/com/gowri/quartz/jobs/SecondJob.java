@@ -1,6 +1,8 @@
 package com.gowri.quartz.jobs;
 
 import java.text.SimpleDateFormat;
+import java.time.LocalDateTime;
+import java.time.format.DateTimeFormatter;
 import java.util.Date;
 import org.quartz.*;
 import org.slf4j.*;
@@ -25,6 +27,8 @@ public class SecondJob implements Job {
         System.out.println("############################");
         System.out.println("Job count: "+jobCount);
         log.info("\n********** Started ************\n");
+        log.info("Second Job start time:: {}",
+				LocalDateTime.now().format(DateTimeFormatter.ofPattern("dd MMM yyyy hh:mm a")));
         log.info("Job Count: {}", jobCount);
         log.info("Second Job Start Time: {}", sdf.format(new Date(startTime)));
 

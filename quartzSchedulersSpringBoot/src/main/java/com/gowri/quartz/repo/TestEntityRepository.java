@@ -2,7 +2,6 @@ package com.gowri.quartz.repo;
 
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;
-
 import com.gowri.quartz.model.TestEntity;
 
 /**

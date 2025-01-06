@@ -1,14 +1,14 @@
 package com.gowri.quartz.schedulers;
 
+import java.time.LocalDateTime;
+import java.time.format.DateTimeFormatter;
 import org.quartz.*;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
-
 import com.gowri.quartz.model.TriggerInfo;
 import com.gowri.quartz.utils.CommonUtils;
-
 import jakarta.annotation.PostConstruct;
 import jakarta.annotation.PreDestroy;
 
@@ -51,6 +51,8 @@ public class MainScheduler {
 	
 	public void scheduleJob(Class className, TriggerInfo triggerInfo) {
 		try {
+			log.info("Scheduling job: {}",
+					LocalDateTime.now().format(DateTimeFormatter.ofPattern("dd MMM yyyy hh:mm a")));
 			JobDetail jobDetail = commonUtils.getJobDetail(className, triggerInfo);
 			Trigger trigerInfoOfJob = commonUtils.getTrigerInfoOfJob(className, triggerInfo);
 			scheduler.scheduleJob(jobDetail,trigerInfoOfJob);
