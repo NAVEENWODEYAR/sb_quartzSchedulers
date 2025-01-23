@@ -1,15 +1,8 @@
 package com.gowri.quartz.utils;
 
 import java.util.Date;
-
-import org.quartz.JobBuilder;
-import org.quartz.JobDataMap;
-import org.quartz.JobDetail;
-import org.quartz.SimpleScheduleBuilder;
-import org.quartz.Trigger;
-import org.quartz.TriggerBuilder;
+import org.quartz.*;
 import org.springframework.stereotype.Service;
-
 import com.gowri.quartz.model.TriggerInfo;
 
 /**
@@ -17,6 +10,7 @@ import com.gowri.quartz.model.TriggerInfo;
  * @date 11-Oct-2024
  * @time 10:24:57 pm
  */
+
 @Service
 public class CommonUtils {
 
