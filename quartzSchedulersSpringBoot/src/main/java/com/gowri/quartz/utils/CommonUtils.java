@@ -1,8 +1,13 @@
 package com.gowri.quartz.utils;
 
+<<<<<<< HEAD
 import java.util.*;
 import org.quartz.*;
 import org.slf4j.*;
+=======
+import java.util.Date;
+import org.quartz.*;
+>>>>>>> release
 import org.springframework.stereotype.Service;
 import com.gowri.quartz.model.TriggerInfo;
 
@@ -11,6 +16,7 @@ import com.gowri.quartz.model.TriggerInfo;
  * @date 11-Oct-2024
  * @time 10:24:57 pm
  */
+
 @Service
 public class CommonUtils {
 

@@ -4,8 +4,16 @@ import java.time.LocalDate;
 import java.time.LocalDateTime;
 import java.time.format.DateTimeFormatter;
 import java.util.Date;
+<<<<<<< HEAD
 import org.quartz.*;
 import org.slf4j.*;
+=======
+import org.quartz.Job;
+import org.quartz.JobExecutionContext;
+import org.quartz.JobExecutionException;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
+>>>>>>> release
 import org.springframework.stereotype.Component;
 
 /**
@@ -20,6 +28,7 @@ public class FirstJob implements Job {
 
 	@Override
 	public void execute(JobExecutionContext context) throws JobExecutionException {
+<<<<<<< HEAD
 		log.info("First job started "+LocalDate.now());
 		log.info("First job start time:: {}",
 				LocalDateTime.now().format(DateTimeFormatter.ofPattern("dd MMM yyyy hh:mm a")));
@@ -28,6 +37,11 @@ public class FirstJob implements Job {
 		log.info("First job executed  "+LocalDate.now());
 		log.info("Accessing EndPoint using CRON:: {}",
 				LocalDateTime.now().format(DateTimeFormatter.ofPattern("dd MMM yyyy hh:mm a")));
+=======
+		log.info("dummy job executed");
+		System.out.println("Dummy Job!,");
+        System.out.println("First Job in Qaurtz Scheduling.."+new Date(System.currentTimeMillis()));
+>>>>>>> release
 	}
 
 }
