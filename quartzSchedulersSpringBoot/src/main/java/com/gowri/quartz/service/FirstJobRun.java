@@ -2,7 +2,6 @@ package com.gowri.quartz.service;
 
 import java.time.LocalDateTime;
 import java.time.format.DateTimeFormatter;
-
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.stereotype.Service;
@@ -31,16 +30,11 @@ public class FirstJobRun {
     public void init() {
         try {
             TriggerInfo triggerInfo = commonUtils.getTriggerInfo(5, false, 1000L, 1000L, "info");
-<<<<<<< HEAD
             mainScheduler.scheduleJob(FirstJob.class, triggerInfo); 
             log.info("Job scheduled,");
             log.info("TIMESTAMP:: {}",
     				LocalDateTime.now().format(DateTimeFormatter.ofPattern("dd MMM yyyy hh:mm a")));
-            } catch (Exception e) {
-=======
-            mainScheduler.scheduleJob(FirstJob.class, triggerInfo);  
         } catch (Exception e) {
->>>>>>> release
             e.printStackTrace();
         }
     }

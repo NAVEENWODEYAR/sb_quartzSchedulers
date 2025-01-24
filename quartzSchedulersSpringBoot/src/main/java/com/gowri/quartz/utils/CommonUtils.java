@@ -1,13 +1,10 @@
 package com.gowri.quartz.utils;
 
-<<<<<<< HEAD
 import java.util.*;
 import org.quartz.*;
 import org.slf4j.*;
-=======
 import java.util.Date;
 import org.quartz.*;
->>>>>>> release
 import org.springframework.stereotype.Service;
 import com.gowri.quartz.model.TriggerInfo;
 
