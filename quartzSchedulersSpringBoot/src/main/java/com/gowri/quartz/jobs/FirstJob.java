@@ -4,8 +4,6 @@ import java.time.LocalDate;
 import java.time.LocalDateTime;
 import java.time.format.DateTimeFormatter;
 import java.util.Date;
-import org.quartz.*;
-import org.slf4j.*;
 import org.quartz.Job;
 import org.quartz.JobExecutionContext;
 import org.quartz.JobExecutionException;
@@ -18,6 +16,7 @@ import org.springframework.stereotype.Component;
  * @date 11-Oct-2024
  * @time 10:12:40 pm
  */
+
 @Component
 public class FirstJob implements Job {
 	
