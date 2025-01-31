@@ -2,7 +2,6 @@ package com.gowri.quartz;
 
 import java.text.SimpleDateFormat;
 import java.util.Date;
-
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -12,7 +11,6 @@ import org.springframework.context.ApplicationContext;
 import org.springframework.core.env.Environment;
 import org.springframework.scheduling.annotation.EnableScheduling;
 import org.springframework.scheduling.annotation.Scheduled;
-
 import com.gowri.quartz.controller.TestController;
 
 @SpringBootApplication
@@ -53,7 +51,7 @@ public class QuartzSchedulersSpringBootApplication {
     // Scheduled task that runs every 10 seconds to log application status
     @Scheduled(fixedRate = 1000)
     public void logApplicationStatus() {
-        log.info("Application is running. Current time: {}", dateFormat.format(new Date()));
+        log.info("Server Running : {}", dateFormat.format(new Date()));
     }
     
     @Scheduled(cron = "0 0/5 * * * *")  
