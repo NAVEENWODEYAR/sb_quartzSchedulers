@@ -1,11 +1,17 @@
 package com.gowri.quartz.utils;
 
-import java.util.*;
-import org.quartz.*;
-import org.slf4j.*;
 import java.util.Date;
-import org.quartz.*;
+import org.quartz.CronScheduleBuilder;
+import org.quartz.JobBuilder;
+import org.quartz.JobDataMap;
+import org.quartz.JobDetail;
+import org.quartz.SimpleScheduleBuilder;
+import org.quartz.Trigger;
+import org.quartz.TriggerBuilder;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.springframework.stereotype.Service;
+
 import com.gowri.quartz.model.TriggerInfo;
 
 /**

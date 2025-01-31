@@ -12,6 +12,7 @@ import org.slf4j.*;
  * @date 12-Oct-2024
  * @time 7:03:30 pm
  */
+
 public class SecondJob implements Job {
 
     private static final Logger log = LoggerFactory.getLogger(SecondJob.class);
