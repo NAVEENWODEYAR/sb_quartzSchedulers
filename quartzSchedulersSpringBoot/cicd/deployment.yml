@@ -5,7 +5,7 @@ metadata:
   labels:
     app: springboot-app
 spec:
-  replicas: 3  # Number of pods to run
+  replicas: 4  # Number of pods to run
   selector:
     matchLabels:
       app: springboot-app
