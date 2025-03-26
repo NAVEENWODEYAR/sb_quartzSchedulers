@@ -9,12 +9,14 @@ import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.context.ApplicationContext;
 import org.springframework.core.env.Environment;
+import org.springframework.retry.annotation.EnableRetry;
 import org.springframework.scheduling.annotation.EnableScheduling;
 import org.springframework.scheduling.annotation.Scheduled;
 import com.gowri.quartz.controller.TestController;
 
 @SpringBootApplication
 @EnableScheduling 
+@EnableRetry
 public class QuartzSchedulersSpringBootApplication {
 
     private static final Logger log = LoggerFactory.getLogger(QuartzSchedulersSpringBootApplication.class);
