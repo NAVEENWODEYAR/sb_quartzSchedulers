@@ -1,5 +1,6 @@
 package com.gowri.quartz.schedulers;
 
+import org.quartz.DisallowConcurrentExecution;
 import org.springframework.scheduling.annotation.Scheduled;
 import org.springframework.stereotype.Component;
 
@@ -10,6 +11,7 @@ import org.springframework.stereotype.Component;
  */
 
 @Component
+@DisallowConcurrentExecution
 public class MyScheduledTask {
 
     private boolean taskExecuted = false;
