@@ -19,6 +19,7 @@ import jakarta.annotation.PreDestroy;
  */
 
 @Service
+@DisallowConcurrentExecution
 public class MainScheduler {
 	
 	private static final Logger log = LoggerFactory.getLogger(MainScheduler.class);

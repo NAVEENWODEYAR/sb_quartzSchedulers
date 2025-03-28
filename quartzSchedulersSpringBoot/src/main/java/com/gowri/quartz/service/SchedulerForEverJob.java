@@ -5,7 +5,6 @@ import org.slf4j.LoggerFactory;
 import org.springframework.stereotype.Service;
 
 import com.gowri.quartz.jobs.SecondJob;
-import com.gowri.quartz.model.TriggerInfo;
 import com.gowri.quartz.schedulers.MainScheduler;
 import com.gowri.quartz.utils.CommonUtils;
 
